@@ -18,17 +18,16 @@ Kaynak: <https://detsis.gov.tr/birim/35955870/35955870/2026-05-20>
 - Arama, kategori filtresi, kayıt sayısı, kategori kartları ve resmi link butonu olan statik panel
 - GitHub Actions ile her gün Türkiye saatiyle 03:00'te otomatik güncelleme
 
-## Beklenen Kayıt Sayıları
+## Veri Bütünlüğü Kontrolleri
 
-| Kategori | Beklenen adet |
-| --- | ---: |
-| Kurum Yönetmeliği | 51 |
-| Esas ve Usuller | 24 |
-| Yönerge | 149 |
-| İlke Kararı | 2 |
-| Toplam | 226 |
+DETSİS kayıt sayısı zaman içinde değişebilir. Scraper sabit toplam veya kategori adedi beklemek yerine şu kontrolleri yapar:
 
-Scraper bu sayılarla eşleşmeyen bir sonuç üretirse başarılı sayılmaz; açıkça hata verir.
+- Toplam kayıt `0` ise hata verir.
+- Kategorisi boş kayıt varsa hata verir.
+- Resmi linki eksik kayıt varsa hata verir.
+- JSON çıktı dosyası oluşmazsa hata verir.
+- Kayıt sayısı değişirse `logs/hata_log.csv` içine bilgi yazar.
+- Yeni kayıtları `logs/new_records.log` içine ekler.
 
 ## Kurulum
 

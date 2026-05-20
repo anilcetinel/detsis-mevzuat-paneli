@@ -16,13 +16,6 @@ from playwright.async_api import Page, TimeoutError as PlaywrightTimeoutError, a
 
 SOURCE_URL = "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"
 CATEGORIES = ["Kurum Yönetmeliği", "Esas ve Usuller", "Yönerge", "İlke Kararı"]
-EXPECTED_COUNTS = {
-    "Kurum Yönetmeliği": 51,
-    "Esas ve Usuller": 24,
-    "Yönerge": 149,
-    "İlke Kararı": 2,
-}
-EXPECTED_TOTAL = 226
 
 ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
@@ -31,6 +24,7 @@ LOG_DIR = ROOT / "logs"
 JSON_PATH = DATA_DIR / "mevzuatlar.json"
 CSV_PATH = DATA_DIR / "mevzuatlar.csv"
 ERROR_LOG_PATH = LOG_DIR / "hata_log.csv"
+NEW_RECORDS_LOG_PATH = LOG_DIR / "new_records.log"
 
 
 @dataclass(frozen=True)
@@ -72,6 +66,27 @@ def append_error(message: str, details: str = "") -> None:
                 "detay": details,
             }
         )
+
+
+def append_new_records(records: list["Regulation"]) -> None:
+    if not records:
+        return
+    ensure_dirs()
+    with NEW_RECORDS_LOG_PATH.open("a", encoding="utf-8") as handle:
+        handle.write(f"\n{datetime.now().isoformat(timespec='seconds')} - Yeni kayıtlar\n")
+        for record in records:
+            handle.write(f"- [{record.kategori}] {record.mevzuat_adı} | {record.resmi_link}\n")
+
+
+def load_previous_records() -> list[dict[str, str]]:
+    if not JSON_PATH.exists():
+        return []
+    try:
+        payload = json.loads(JSON_PATH.read_text(encoding="utf-8"))
+    except Exception as exc:
+        append_error("Önceki JSON okunamadı", str(exc))
+        return []
+    return payload.get("kayitlar", [])
 
 
 async def click_text(page: Page, text: str, timeout: int = 8_000) -> bool:
@@ -344,28 +359,32 @@ async def scrape() -> list[Regulation]:
             await browser.close()
 
 
-def validate(records: list[Regulation]) -> None:
+def validate(records: list[Regulation], previous_records: list[dict[str, str]]) -> None:
     errors: list[str] = []
-    counts = {category: 0 for category in CATEGORIES}
-    for record in records:
-        counts[record.kategori] = counts.get(record.kategori, 0) + 1
 
-    for category, expected in EXPECTED_COUNTS.items():
-        actual = counts.get(category, 0)
-        if actual != expected:
-            errors.append(f"{category}: beklenen {expected}, bulunan {actual}")
+    if not records:
+        errors.append("Toplam kayıt 0 geldi")
 
-    if len(records) != EXPECTED_TOTAL:
-        errors.append(f"Toplam: beklenen {EXPECTED_TOTAL}, bulunan {len(records)}")
+    missing_categories = [record.mevzuat_adı for record in records if not record.kategori]
+    if missing_categories:
+        errors.append(f"Kategori boş kayıt sayısı: {len(missing_categories)}")
 
     missing_links = [record.mevzuat_adı for record in records if not record.resmi_link]
     if missing_links:
-        append_error("Linki olmayan kayıtlar var", "; ".join(missing_links[:25]))
+        errors.append(f"Link eksik kayıt sayısı: {len(missing_links)}")
 
     if errors:
-        message = "Mevzuat sayıları beklenen değerlerle eşleşmedi."
+        message = "Mevzuat veri bütünlüğü kontrolü başarısız."
         append_error(message, " | ".join(errors))
         raise RuntimeError(f"{message} {' | '.join(errors)}")
+
+    previous_count = len(previous_records)
+    if previous_count and previous_count != len(records):
+        append_error("Yeni mevzuat sayısı algılandı", f"Yeni mevzuat sayısı algılandı: {len(records)}")
+
+    previous_links = {record.get("resmi_link", "") for record in previous_records}
+    new_records = [record for record in records if record.resmi_link and record.resmi_link not in previous_links]
+    append_new_records(new_records)
 
 
 def write_outputs(records: list[Regulation]) -> None:
@@ -374,7 +393,6 @@ def write_outputs(records: list[Regulation]) -> None:
     payload = {
         "kaynak_url": SOURCE_URL,
         "son_kontrol_tarihi": datetime.now().isoformat(timespec="seconds"),
-        "beklenen_toplam": EXPECTED_TOTAL,
         "toplam": len(records),
         "kategori_sayilari": {category: sum(1 for item in records if item.kategori == category) for category in CATEGORIES},
         "kayitlar": [asdict(record) for record in records],
@@ -389,9 +407,12 @@ def write_outputs(records: list[Regulation]) -> None:
 async def main() -> None:
     ensure_dirs()
     try:
+        previous_records = load_previous_records()
         records = await scrape()
-        validate(records)
+        validate(records, previous_records)
         write_outputs(records)
+        if not JSON_PATH.exists():
+            raise RuntimeError("JSON çıktı dosyası oluşmadı.")
         print(f"Başarılı: {len(records)} kayıt yazıldı.")
     except Exception as exc:
         append_error(type(exc).__name__, str(exc))

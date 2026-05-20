@@ -33,13 +33,31 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: DETSİS scraper çalıştır
-        run: python scraper.py
+        run: |
+          set -e
+          echo "DETSİS scraper başlatılıyor..."
+          python scraper.py
+          echo "Scraper tamamlandı. Üretilen veri özeti:"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("data/mevzuatlar.json")
+          if not path.exists():
+              raise SystemExit("HATA: data/mevzuatlar.json oluşmadı.")
+
+          data = json.loads(path.read_text(encoding="utf-8"))
+          print(f"Toplam kayıt: {data.get('toplam')}")
+          print("Kategori sayıları:")
+          for category, count in data.get("kategori_sayilari", {}).items():
+              print(f"- {category}: {count}")
+          PY
 
       - name: Veri değiştiyse commit at
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "data: DETSIS mevzuat verisini güncelle"
-          file_pattern: "data/mevzuatlar.json data/mevzuatlar.csv data/archive/*.json logs/hata_log.csv"
+          file_pattern: "data/mevzuatlar.json data/mevzuatlar.csv data/archive/*.json logs/hata_log.csv logs/new_records.log"
 
   deploy:
     needs: scrape
