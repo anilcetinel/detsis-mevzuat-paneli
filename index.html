@@ -3,34 +3,77 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
     <title>DETSİS Mevzuat Paneli</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">Öğrenci Destek Koordinatörlüğü</p>
-        <h1>DETSİS Mevzuat Paneli</h1>
+    <a class="skip-link" href="#records">İçeriğe geç</a>
+
+    <header class="site-header">
+      <div class="brand-row" aria-label="Kurum ve sistem logoları">
+        <div class="brand-lockup sau-lockup">
+          <img class="sau-wordmark" src="./assets/sau-logo-yatay.png" alt="Sakarya Üniversitesi" />
+          <div>
+            <span class="brand-sub">Öğrenci Destek Koordinatörlüğü</span>
+          </div>
+        </div>
+
+        <div class="brand-lockup detsis-lockup">
+          <img class="detsis-wordmark" src="./assets/detsis-mark.svg" alt="DETSİS Mevzuat Paneli" />
+        </div>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Karanlık modu aç" aria-pressed="false">
+          <span aria-hidden="true">◐</span>
+          <span class="theme-label">Karanlık mod</span>
+        </button>
       </div>
-      <div class="status">
-        <span>Son kontrol tarihi</span>
-        <strong id="lastChecked">-</strong>
+
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Sakarya Üniversitesi</p>
+          <h1>DETSİS Mevzuat Paneli</h1>
+          <p class="lead">Sakarya Üniversitesi mevzuat kayıtları tek ekranda aranabilir, filtrelenebilir ve resmi kaynak bağlantılarıyla izlenebilir.</p>
+        </div>
+        <div class="status" aria-label="Son kontrol tarihi">
+          <span>Son kontrol tarihi</span>
+          <strong id="lastChecked">-</strong>
+        </div>
       </div>
     </header>
 
     <main>
+      <section class="info-box" aria-label="Veri bilgilendirmesi">
+        <div class="info-icon" aria-hidden="true">i</div>
+        <div>
+          <strong>Veriler DETSİS kaynak sisteminden otomatik güncellenmektedir.</strong>
+          <span>Eksik kayıt tespit edilirse scraper başarılı sayılmaz ve hata loguna yazılır.</span>
+        </div>
+      </section>
+
       <section class="summary" aria-label="Özet">
         <div class="metric total">
           <span>Toplam kayıt</span>
-          <strong id="totalCount">0</strong>
+          <strong id="totalCount" data-target="0">0</strong>
         </div>
-        <div id="categoryCards" class="category-cards"></div>
+        <div id="categoryCards" class="category-cards" aria-live="polite"></div>
+      </section>
+
+      <section id="latestSection" class="latest" aria-labelledby="latestTitle">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Son güncellenen mevzuatlar</p>
+            <h2 id="latestTitle">En yeni tarihli kayıtlar</h2>
+          </div>
+        </div>
+        <div id="latestRecords" class="latest-list"></div>
       </section>
 
       <section class="toolbar" aria-label="Arama ve filtreleme">
         <label class="search">
           <span>Arama</span>
-          <input id="searchInput" type="search" placeholder="Mevzuat adı, kategori veya tarih ara" autocomplete="off" />
+          <input id="searchInput" type="search" placeholder="Mevzuat adı, kategori veya tarih ara" autocomplete="off" aria-describedby="searchHelp" />
+          <small id="searchHelp">Sonuçlar yazdıkça filtrelenir.</small>
         </label>
         <label class="filter">
           <span>Kategori</span>
@@ -42,14 +85,26 @@
 
       <section class="results" aria-label="Mevzuat kayıtları">
         <div class="results-head">
-          <strong id="visibleCount">0 kayıt</strong>
+          <strong id="visibleCount" aria-live="polite">0 kayıt</strong>
           <span><strong>Kaynak: DETSİS</strong> <span id="sourceUrl"></span></span>
         </div>
-        <p class="data-note">Veriler DETSİS kaynak sayfasından otomatik kontrol edilerek güncellenir.</p>
-        <div id="records" class="records"></div>
+        <div id="skeleton" class="skeleton-list" aria-hidden="true">
+          <div class="skeleton-row"></div>
+          <div class="skeleton-row"></div>
+          <div class="skeleton-row"></div>
+          <div class="skeleton-row"></div>
+        </div>
+        <div id="records" class="records" tabindex="-1"></div>
         <p id="emptyState" class="empty" hidden>Kriterlere uyan kayıt bulunamadı.</p>
+        <div id="errorState" class="error-state" role="alert" hidden>
+          Veriler yüklenemedi. Lütfen bağlantınızı kontrol edip sayfayı yeniden deneyin.
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      © Sakarya Üniversitesi - DETSİS Mevzuat Paneli
+    </footer>
 
     <script src="app.js"></script>
   </body>

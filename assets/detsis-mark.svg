@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" role="img" aria-labelledby="title desc">
+  <title id="title">DETSİS</title>
+  <desc id="desc">DETSİS mevzuat paneli için metin rozet</desc>
+  <rect width="220" height="64" rx="14" fill="#0b3b2b"/>
+  <rect x="8" y="8" width="48" height="48" rx="10" fill="#006341"/>
+  <path d="M20 22h24M20 32h24M20 42h16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <text x="70" y="30" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="800">DETSİS</text>
+  <text x="70" y="48" fill="#d8a229" font-family="Arial, sans-serif" font-size="12" font-weight="700">Mevzuat Paneli</text>
+</svg>
