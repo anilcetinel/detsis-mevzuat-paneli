@@ -161,6 +161,11 @@ def clean_text(value: str) -> str:
     return re.sub(r"\s+", " ", value.replace("\xa0", " ")).strip(" -–—\t\r\n")
 
 
+def clean_regulation_name(value: str) -> str:
+    name = clean_text(value)
+    return re.sub(r"^Sayı\s+[0-9A-Za-zÇĞİÖŞÜçğıöşü./-]+\s+", "", name, flags=re.I).strip()
+
+
 async def extract_from_dom(page: Page, category: str) -> list[Regulation]:
     section_link_records = await page.evaluate(
         """
@@ -222,8 +227,8 @@ async def extract_from_dom(page: Page, category: str) -> list[Regulation]:
         return dedupe(
             Regulation(
                 kategori=category,
-                mevzuat_adı=clean_text(re.sub(r"\s+yeni sekmede aç$", "", row["text"].split(" Resmi Gazete ")[0].replace("Mevzuat ", ""))),
-                tarih=(DATE_RE.search(row["text"]).group(1) if DATE_RE.search(row["text"]) else ""),
+                mevzuat_adı=clean_regulation_name(re.sub(r"\s+yeni sekmede aç$", "", row["text"].split(" Resmi Gazete ")[0].replace("Mevzuat ", ""))),
+                tarih=(DATE_RE.search(row["text"]).group(1) if DATE_RE.search(row["text"]) else "-"),
                 resmi_link=row["href"],
                 kaynak_url=SOURCE_URL,
             )
@@ -286,8 +291,8 @@ async def extract_from_dom(page: Page, category: str) -> list[Regulation]:
         if not text or text.casefold() == category.casefold():
             continue
         date_match = DATE_RE.search(text)
-        date = date_match.group(1) if date_match else ""
-        name = clean_text(DATE_RE.sub("", text))
+        date = date_match.group(1) if date_match else "-"
+        name = clean_regulation_name(DATE_RE.sub("", text))
         name = re.sub(r"^\d+\s*[.)-]\s*", "", name).strip()
         if len(name) < 3:
             continue

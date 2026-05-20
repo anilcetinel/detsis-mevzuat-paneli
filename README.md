@@ -4,6 +4,10 @@ Sakarya Üniversitesi Rektörlüğü DETSİS sayfasındaki **Mevzuat** sekmesini
 
 Kaynak: <https://detsis.gov.tr/birim/35955870/35955870/2026-05-20>
 
+## Canlı Panel Linki
+
+<https://anilcetinel.github.io/detsis-mevzuat-paneli/>
+
 ## Özellikler
 
 - Python + Playwright scraper

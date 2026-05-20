@@ -50,6 +50,8 @@ jobs:
     steps:
       - name: Depoyu al
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - name: Pages yapılandır
         uses: actions/configure-pages@v5

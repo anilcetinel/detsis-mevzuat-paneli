@@ -102,7 +102,7 @@ function renderRecords() {
 }
 
 async function loadData() {
-  const response = await fetch("data/mevzuatlar.json", { cache: "no-store" });
+  const response = await fetch("./data/mevzuatlar.json", { cache: "no-store" });
   if (!response.ok) {
     throw new Error("data/mevzuatlar.json yüklenemedi.");
   }

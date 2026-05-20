@@ -1,0 +1,3 @@
+﻿zaman,hata,detay
+2026-05-20T15:33:30,Mevzuat sayıları beklenen değerlerle eşleşmedi.,"Yönerge: beklenen 149, bulunan 150 | Toplam: beklenen 226, bulunan 227"
+2026-05-20T15:33:30,RuntimeError,"Mevzuat sayıları beklenen değerlerle eşleşmedi. Yönerge: beklenen 149, bulunan 150 | Toplam: beklenen 226, bulunan 227"
