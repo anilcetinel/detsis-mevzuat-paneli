@@ -33,10 +33,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -66,7 +68,7 @@ select {
 }
 
 .site-header {
-  padding: 18px clamp(16px, 4vw, 56px) 36px;
+  padding: 10px clamp(14px, 3vw, 40px) 18px;
   color: #fff;
   background:
     linear-gradient(135deg, rgba(0, 99, 65, 0.96), rgba(5, 7, 10, 0.94)),
@@ -84,7 +86,7 @@ select {
 
 .brand-row {
   justify-content: space-between;
-  gap: 18px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -95,7 +97,7 @@ select {
 }
 
 .sau-lockup {
-  padding: 10px 14px;
+  padding: 6px 10px;
   background: rgba(255, 255, 255, 0.92);
   border-radius: 8px;
   box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
@@ -103,13 +105,17 @@ select {
 
 .sau-wordmark {
   display: block;
-  width: min(320px, 58vw);
+  width: auto;
+  max-width: min(280px, 46vw);
+  max-height: 56px;
   height: auto;
 }
 
 .detsis-wordmark {
   display: block;
-  width: 220px;
+  width: auto;
+  max-width: 180px;
+  max-height: 52px;
   height: auto;
   filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.2));
 }
@@ -126,7 +132,7 @@ select {
 
 .brand-sub {
   color: #315449;
-  font-size: 0.86rem;
+  font-size: 0.78rem;
   font-weight: 800;
 }
 
@@ -134,8 +140,8 @@ select {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-height: 42px;
-  padding: 0 14px;
+  min-height: 36px;
+  padding: 0 12px;
   color: #fff;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -150,8 +156,8 @@ select {
 .hero {
   justify-content: space-between;
   align-items: flex-end;
-  gap: 28px;
-  margin-top: 56px;
+  gap: 18px;
+  margin-top: 18px;
 }
 
 .eyebrow {
@@ -170,8 +176,8 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 4.4rem);
-  line-height: 1;
+  font-size: clamp(1.65rem, 3.2vw, 3rem);
+  line-height: 1.05;
   text-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
 }
 
@@ -181,14 +187,14 @@ h2 {
 
 .lead {
   max-width: 760px;
-  margin: 14px 0 0;
+  margin: 8px 0 0;
   color: rgba(255, 255, 255, 0.82);
-  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  font-size: clamp(0.94rem, 1.4vw, 1.06rem);
 }
 
 .status {
-  min-width: 238px;
-  padding: 16px 18px;
+  min-width: 210px;
+  padding: 10px 12px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: var(--radius);
@@ -216,14 +222,14 @@ label span {
 
 main {
   width: min(1180px, calc(100% - 32px));
-  margin: 24px auto 42px;
+  margin: 14px auto 34px;
 }
 
 .info-box {
   display: flex;
   gap: 14px;
   align-items: flex-start;
-  padding: 16px 18px;
+  padding: 12px 14px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-left: 5px solid var(--sau-green);
@@ -252,13 +258,13 @@ main {
 .summary {
   display: grid;
   grid-template-columns: minmax(190px, 0.75fr) 3fr;
-  gap: 14px;
-  margin-top: 18px;
+  gap: 10px;
+  margin-top: 12px;
 }
 
 .metric {
-  min-height: 112px;
-  padding: 18px;
+  min-height: 92px;
+  padding: 14px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -268,7 +274,7 @@ main {
 .metric strong {
   display: block;
   margin-top: 10px;
-  font-size: 2.25rem;
+  font-size: 1.9rem;
   line-height: 1;
 }
 
@@ -285,7 +291,7 @@ main {
 .category-cards {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  gap: 10px;
 }
 
 .category-cards .metric {
@@ -303,8 +309,8 @@ main {
 }
 
 .latest {
-  margin-top: 18px;
-  padding: 18px;
+  margin-top: 12px;
+  padding: 14px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -321,14 +327,14 @@ main {
 .latest-list {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
 }
 
 .latest-card {
   align-items: stretch;
   flex-direction: column;
-  min-height: 138px;
-  padding: 14px;
+  min-height: 116px;
+  padding: 12px;
   color: inherit;
   background: var(--surface-2);
   border: 1px solid var(--line);
@@ -358,9 +364,9 @@ main {
   z-index: 20;
   display: grid;
   grid-template-columns: 1fr minmax(220px, 320px);
-  gap: 14px;
-  margin: 18px 0;
-  padding: 14px;
+  gap: 10px;
+  margin: 12px 0;
+  padding: 10px;
   background: color-mix(in srgb, var(--surface) 92%, transparent);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -371,8 +377,8 @@ main {
 input,
 select {
   width: 100%;
-  min-height: 46px;
-  margin-top: 7px;
+  min-height: 40px;
+  margin-top: 5px;
   padding: 0 12px;
   color: var(--text);
   background: var(--surface);
@@ -381,8 +387,7 @@ select {
 }
 
 small {
-  display: block;
-  margin-top: 4px;
+  display: none;
   color: var(--muted);
 }
 
@@ -405,7 +410,7 @@ a:focus-visible {
 .results-head {
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 18px;
+  padding: 12px 14px;
   background: var(--surface-2);
   border-bottom: 1px solid var(--line);
 }
@@ -423,8 +428,8 @@ a:focus-visible {
 .record {
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  padding: 16px 18px;
+  gap: 12px;
+  padding: 12px 14px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -463,9 +468,9 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-width: 148px;
-  min-height: 44px;
-  padding: 0 16px;
+  min-width: 140px;
+  min-height: 40px;
+  padding: 0 14px;
   color: #fff;
   background: linear-gradient(135deg, var(--sau-green), var(--sau-green-2));
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -559,42 +564,89 @@ a:focus-visible {
 }
 
 @media (max-width: 720px) {
-  .site-header {
-    padding-inline: 16px;
+  html {
+    scroll-padding-top: 112px;
   }
 
-  .brand-row,
+  .site-header {
+    padding: 8px 12px 14px;
+  }
+
   .hero,
   .results-head,
   .record {
     display: block;
   }
 
-  .detsis-lockup,
-  .theme-toggle,
-  .status {
-    margin-top: 14px;
+  .brand-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
   }
 
-  .sau-lockup,
+  .sau-lockup {
+    min-width: 0;
+    padding: 5px 7px;
+  }
+
   .detsis-lockup {
-    width: 100%;
+    flex: 0 0 auto;
+    margin-left: auto;
   }
 
   .sau-wordmark,
   .detsis-wordmark {
-    width: 100%;
-    max-width: 320px;
+    width: auto;
+    max-height: 40px;
+  }
+
+  .sau-wordmark {
+    max-width: 145px;
+  }
+
+  .detsis-wordmark {
+    max-width: 104px;
+    max-height: 34px;
   }
 
   .theme-toggle {
-    width: 100%;
+    flex: 0 0 36px;
+    width: 36px;
+    min-height: 36px;
+    padding: 0;
     justify-content: center;
+  }
+
+  .theme-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .hero {
+    margin-top: 12px;
+  }
+
+  .hero h1 {
+    font-size: 1.55rem;
+  }
+
+  .lead {
+    display: none;
+  }
+
+  .status {
+    min-width: 0;
+    margin-top: 10px;
+    padding: 8px 10px;
   }
 
   main {
     width: min(100% - 20px, 1180px);
-    margin-top: 14px;
+    margin-top: 10px;
   }
 
   .category-cards,
@@ -604,8 +656,21 @@ a:focus-visible {
 
   .toolbar {
     top: 0;
-    margin-inline: -4px;
+    grid-template-columns: minmax(0, 1fr) minmax(116px, 38%);
+    align-items: end;
+    gap: 8px;
+    margin-inline: 0;
+    padding: 8px;
     border-radius: 0 0 var(--radius) var(--radius);
+  }
+
+  input,
+  select {
+    min-height: 38px;
+  }
+
+  label span {
+    font-size: 0.74rem;
   }
 
   .open-link {

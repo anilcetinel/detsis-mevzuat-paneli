@@ -208,19 +208,40 @@ function renderRecords() {
   renderChunk();
 }
 
+function alignHashTarget() {
+  if (window.location.hash !== "#records") return;
+  window.setTimeout(() => {
+    els.records?.scrollIntoView({ block: "start" });
+  }, 150);
+}
+
 async function loadData() {
   try {
-    const response = await fetch("./data/mevzuatlar.json", { cache: "no-store" });
-    if (!response.ok) throw new Error("data/mevzuatlar.json yüklenemedi.");
+    const dataUrl = new URL("./data/mevzuatlar.json", window.location.href);
+    dataUrl.searchParams.set("v", Date.now().toString());
+    const response = await fetch(dataUrl.toString(), {
+      cache: "no-store",
+      headers: { Accept: "application/json" },
+    });
+    if (!response.ok) {
+      throw new Error(`JSON fetch başarısız: ${response.status} ${response.statusText} (${dataUrl.toString()})`);
+    }
     state.data = await response.json();
     state.records = state.data.kayitlar || [];
+    if (!Array.isArray(state.records) || state.records.length === 0) {
+      throw new Error(`JSON okundu ancak kayıt listesi boş veya geçersiz: ${dataUrl.toString()}`);
+    }
     renderSummary();
     renderLatest();
     renderRecords();
     els.body.classList.add("is-loaded");
+    alignHashTarget();
   } catch (error) {
     els.body.classList.add("is-loaded");
     els.errorState.hidden = false;
+    els.errorState.textContent = `Veriler yüklenemedi. Teknik ayrıntı: ${error.message}`;
+    els.totalCount.textContent = "!";
+    els.visibleCount.textContent = "Veri yok";
     els.records.replaceChildren();
     console.error(error);
   }
