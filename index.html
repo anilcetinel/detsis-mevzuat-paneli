@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DETSİS Mevzuat Paneli</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Öğrenci Destek Koordinatörlüğü</p>
+        <h1>DETSİS Mevzuat Paneli</h1>
+      </div>
+      <div class="status">
+        <span>Son kontrol tarihi</span>
+        <strong id="lastChecked">-</strong>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary" aria-label="Özet">
+        <div class="metric total">
+          <span>Toplam kayıt</span>
+          <strong id="totalCount">0</strong>
+        </div>
+        <div id="categoryCards" class="category-cards"></div>
+      </section>
+
+      <section class="toolbar" aria-label="Arama ve filtreleme">
+        <label class="search">
+          <span>Arama</span>
+          <input id="searchInput" type="search" placeholder="Mevzuat adı, kategori veya tarih ara" autocomplete="off" />
+        </label>
+        <label class="filter">
+          <span>Kategori</span>
+          <select id="categoryFilter">
+            <option value="">Tüm kategoriler</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="results" aria-label="Mevzuat kayıtları">
+        <div class="results-head">
+          <strong id="visibleCount">0 kayıt</strong>
+          <span id="sourceUrl"></span>
+        </div>
+        <div id="records" class="records"></div>
+        <p id="emptyState" class="empty" hidden>Kriterlere uyan kayıt bulunamadı.</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

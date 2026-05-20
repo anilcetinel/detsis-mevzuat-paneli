@@ -1,0 +1,64 @@
+name: DETSIS mevzuat verisini güncelle
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bağımlılıkları kur
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: DETSİS scraper çalıştır
+        run: python scraper.py
+
+      - name: Veri değiştiyse commit at
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "data: DETSIS mevzuat verisini güncelle"
+          file_pattern: "data/mevzuatlar.json data/mevzuatlar.csv data/archive/*.json logs/hata_log.csv"
+
+  deploy:
+    needs: scrape
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v4
+
+      - name: Pages yapılandır
+        uses: actions/configure-pages@v5
+
+      - name: Statik siteyi yükle
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: GitHub Pages yayınla
+        id: deployment
+        uses: actions/deploy-pages@v4
