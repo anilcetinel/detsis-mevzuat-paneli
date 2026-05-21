@@ -2,7 +2,7 @@ name: DETSIS mevzuat verisini güncelle
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
   push:
     branches:
