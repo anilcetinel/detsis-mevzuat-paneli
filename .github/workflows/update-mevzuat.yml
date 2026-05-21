@@ -46,7 +46,7 @@ jobs:
       - name: DETSİS scraper çalıştır
         run: |
           set -Eeuo pipefail
-          trap 'echo "::error::DETSİS scraper adımı başarısız oldu."; echo "---- logs/hata_log.csv ----"; test -f logs/hata_log.csv && tail -n 80 logs/hata_log.csv || echo "hata_log.csv yok"; echo "---- logs/new_records.log ----"; test -f logs/new_records.log && tail -n 80 logs/new_records.log || echo "new_records.log yok"; echo "---- data klasörü ----"; ls -la data || true' ERR
+          trap 'echo "::error::DETSİS scraper adımı başarısız oldu."; echo "---- logs/hata_log.csv ----"; test -f logs/hata_log.csv && tail -n 80 logs/hata_log.csv || echo "hata_log.csv yok"; echo "---- logs/new_records.log ----"; test -f logs/new_records.log && tail -n 80 logs/new_records.log || echo "new_records.log yok"; echo "---- logs/son_degisim_raporu.json ----"; test -f logs/son_degisim_raporu.json && cat logs/son_degisim_raporu.json || echo "son_degisim_raporu.json yok"; echo "---- data klasörü ----"; ls -la data || true' ERR
           echo "Python sürümü:"
           python --version
           echo "Çalışma dizini: $PWD"
@@ -73,6 +73,12 @@ jobs:
           print("Kategori sayıları:")
           for category, count in data.get("kategori_sayilari", {}).items():
               print(f"- {category}: {count}")
+          report = data.get("son_degisim_raporu") or {}
+          print("Son değişiklik tarihi raporu:")
+          print(f"- Bulunan: {report.get('bulunan', 0)}")
+          print(f"- Bulunamayan: {report.get('bulunamayan', 0)}")
+          print(f"- HTML: {report.get('html', 0)}")
+          print(f"- PDF: {report.get('pdf', 0)}")
           PY
 
       - name: DETSİS loglarını göster
@@ -82,12 +88,14 @@ jobs:
           test -f logs/hata_log.csv && tail -n 80 logs/hata_log.csv || echo "hata_log.csv yok"
           echo "---- logs/new_records.log (son 80 satır) ----"
           test -f logs/new_records.log && tail -n 80 logs/new_records.log || echo "new_records.log yok"
+          echo "---- logs/son_degisim_raporu.json ----"
+          test -f logs/son_degisim_raporu.json && cat logs/son_degisim_raporu.json || echo "son_degisim_raporu.json yok"
 
       - name: Veri değiştiyse commit at
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "data: DETSIS mevzuat verisini güncelle"
-          file_pattern: "data/mevzuatlar.json data/mevzuatlar.csv data/archive/*.json logs/hata_log.csv logs/new_records.log"
+          file_pattern: "data/mevzuatlar.json data/mevzuatlar.csv data/archive/*.json logs/hata_log.csv logs/new_records.log logs/son_degisim_raporu.json"
 
   deploy:
     needs: scrape

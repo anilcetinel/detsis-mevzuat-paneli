@@ -1,11 +1,16 @@
 from __future__ import annotations
 
 import asyncio
+import concurrent.futures
 import csv
+import html as html_lib
+import io
 import json
 import re
 import shutil
-from dataclasses import asdict, dataclass
+import threading
+import urllib.request
+from dataclasses import asdict, dataclass, replace
 from datetime import datetime
 from pathlib import Path
 from typing import Iterable
@@ -25,6 +30,9 @@ JSON_PATH = DATA_DIR / "mevzuatlar.json"
 CSV_PATH = DATA_DIR / "mevzuatlar.csv"
 ERROR_LOG_PATH = LOG_DIR / "hata_log.csv"
 NEW_RECORDS_LOG_PATH = LOG_DIR / "new_records.log"
+CHANGE_REPORT_PATH = LOG_DIR / "son_degisim_raporu.json"
+USER_AGENT = "Mozilla/5.0 (compatible; DETSIS-Mevzuat-Paneli/1.0)"
+LOG_LOCK = threading.Lock()
 
 
 @dataclass(frozen=True)
@@ -34,6 +42,8 @@ class Regulation:
     tarih: str
     resmi_link: str
     kaynak_url: str
+    son_degisim_tarihi: str = "-"
+    son_degisim_yontemi: str = "-"
 
 
 def log(message: str) -> None:
@@ -58,18 +68,19 @@ def archive_existing_data() -> None:
 
 def append_error(message: str, details: str = "") -> None:
     ensure_dirs()
-    new_file = not ERROR_LOG_PATH.exists()
-    with ERROR_LOG_PATH.open("a", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["zaman", "hata", "detay"])
-        if new_file:
-            writer.writeheader()
-        writer.writerow(
-            {
-                "zaman": datetime.now().isoformat(timespec="seconds"),
-                "hata": message,
-                "detay": details,
-            }
-        )
+    with LOG_LOCK:
+        new_file = not ERROR_LOG_PATH.exists()
+        with ERROR_LOG_PATH.open("a", encoding="utf-8-sig", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=["zaman", "hata", "detay"])
+            if new_file:
+                writer.writeheader()
+            writer.writerow(
+                {
+                    "zaman": datetime.now().isoformat(timespec="seconds"),
+                    "hata": message,
+                    "detay": details,
+                }
+            )
 
 
 def append_new_records(records: list["Regulation"]) -> None:
@@ -215,10 +226,133 @@ async def category_html(page: Page, category: str) -> str:
 
 
 DATE_RE = re.compile(r"(?<!\d)(\d{1,2}[./-]\d{1,2}[./-]\d{4}|\d{4}[./-]\d{1,2}[./-]\d{1,2})(?!\d)")
+CHANGE_HTML_LABELS = ("Son Güncelleme Tarihi", "Revizyon Tarihi", "Değişiklik Tarihi")
+CHANGE_PDF_LABELS = (
+    "Son Değişiklik",
+    "Revizyon Tarihi",
+    "Değişiklik Tarihi",
+    "Güncelleme Tarihi",
+    "Değişiklik Yapılan Tarih",
+)
 
 
 def clean_text(value: str) -> str:
     return re.sub(r"\s+", " ", value.replace("\xa0", " ")).strip(" -–—\t\r\n")
+
+
+def parse_date_value(value: str) -> datetime | None:
+    match = DATE_RE.search(value or "")
+    if not match:
+        return None
+    raw = match.group(1).replace("-", ".").replace("/", ".")
+    parts = [int(part) for part in raw.split(".")]
+    if len(parts) != 3:
+        return None
+    if parts[0] > 1900:
+        year, month, day = parts
+    else:
+        day, month, year = parts
+    try:
+        return datetime(year, month, day)
+    except ValueError:
+        return None
+
+
+def format_short_date(value: datetime) -> str:
+    return value.strftime("%d.%m.%Y")
+
+
+def fetch_bytes(url: str, timeout: int = 18) -> bytes:
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        return response.read()
+
+
+def fetch_text(url: str, timeout: int = 18) -> str:
+    body = fetch_bytes(url, timeout=timeout)
+    return body.decode("utf-8", errors="ignore")
+
+
+def strip_html(value: str) -> str:
+    without_scripts = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", value, flags=re.I | re.S)
+    text = re.sub(r"<[^>]+>", " ", without_scripts)
+    return clean_text(html_lib.unescape(text))
+
+
+def newest_date_near_labels(text: str, labels: Iterable[str]) -> str:
+    dates: list[datetime] = []
+    lowered = text.casefold()
+    for label in labels:
+        label_lower = label.casefold()
+        start = 0
+        while True:
+            index = lowered.find(label_lower, start)
+            if index == -1:
+                break
+            window = text[max(0, index - 80) : index + len(label) + 220]
+            for match in DATE_RE.finditer(window):
+                parsed = parse_date_value(match.group(1))
+                if parsed:
+                    dates.append(parsed)
+            start = index + len(label_lower)
+    return format_short_date(max(dates)) if dates else "-"
+
+
+def find_pdf_urls(html: str, base_url: str) -> list[str]:
+    candidates = re.findall(r"""(?:href|src)=["']([^"']+)["']""", html, flags=re.I)
+    result: list[str] = []
+    seen: set[str] = set()
+    for candidate in candidates:
+        url = urljoin(base_url, html_lib.unescape(candidate))
+        lower = url.casefold()
+        if ".pdf" not in lower and "pdf" not in lower:
+            continue
+        if url in seen:
+            continue
+        seen.add(url)
+        result.append(url)
+    return result
+
+
+def extract_pdf_text(pdf_url: str) -> str:
+    try:
+        from pypdf import PdfReader
+    except Exception as exc:
+        append_error("PDF okuma bağımlılığı yüklenemedi", str(exc))
+        return ""
+
+    try:
+        reader = PdfReader(io.BytesIO(fetch_bytes(pdf_url, timeout=25)))
+        pages = []
+        for page in reader.pages[:8]:
+            pages.append(page.extract_text() or "")
+        return clean_text(" ".join(pages))
+    except Exception as exc:
+        append_error("PDF metni okunamadı", f"{pdf_url} | {exc}")
+        return ""
+
+
+def extract_change_date(record: Regulation) -> tuple[str, str]:
+    if not record.resmi_link:
+        return "-", "-"
+    try:
+        html = fetch_text(record.resmi_link)
+    except Exception as exc:
+        append_error("Resmi DETSİS sayfası okunamadı", f"{record.resmi_link} | {exc}")
+        return "-", "-"
+
+    html_date = newest_date_near_labels(strip_html(html), CHANGE_HTML_LABELS)
+    if html_date != "-":
+        return html_date, "HTML"
+
+    for pdf_url in find_pdf_urls(html, record.resmi_link)[:2]:
+        pdf_text = extract_pdf_text(pdf_url)
+        if not pdf_text:
+            continue
+        pdf_date = newest_date_near_labels(pdf_text, CHANGE_PDF_LABELS)
+        if pdf_date != "-":
+            return pdf_date, "PDF"
+    return "-", "-"
 
 
 def clean_regulation_name(value: str) -> str:
@@ -456,20 +590,71 @@ def validate(records: list[Regulation], previous_records: list[dict[str, str]]) 
             log(f"Yeni kayıt sayısı: {len(new_records)}")
 
 
+def enrich_change_dates(records: list[Regulation]) -> list[Regulation]:
+    log("Son değişiklik tarihi kontrolü başlıyor.")
+    enriched: list[Regulation] = []
+
+    def enrich_one(record: Regulation) -> Regulation:
+        date, method = extract_change_date(record)
+        return replace(record, son_degisim_tarihi=date, son_degisim_yontemi=method)
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+        for index, record in enumerate(executor.map(enrich_one, records), start=1):
+            enriched.append(record)
+            if index == 1 or index % 25 == 0 or index == len(records):
+                log(f"Son değişiklik kontrolü: {index}/{len(records)}")
+    return enriched
+
+
+def build_change_report(records: list[Regulation]) -> dict[str, object]:
+    html_count = sum(1 for record in records if record.son_degisim_yontemi == "HTML")
+    pdf_count = sum(1 for record in records if record.son_degisim_yontemi == "PDF")
+    found = html_count + pdf_count
+    missing = len(records) - found
+    return {
+        "toplam": len(records),
+        "bulunan": found,
+        "bulunamayan": missing,
+        "html": html_count,
+        "pdf": pdf_count,
+        "olusturma_tarihi": datetime.now().isoformat(timespec="seconds"),
+        "yontemler": {
+            "HTML": "DETSİS resmi kayıt sayfasındaki son güncelleme, revizyon veya değişiklik tarihi alanı",
+            "PDF": "Resmi kayıt sayfasından bulunan PDF içinde değişiklik tarihi ifadeleri",
+            "-": "Son değişiklik tarihi bulunamadı",
+        },
+    }
+
+
 def write_outputs(records: list[Regulation]) -> None:
     ensure_dirs()
     archive_existing_data()
     log("JSON ve CSV çıktıları yazılıyor.")
+    change_report = build_change_report(records)
     payload = {
         "kaynak_url": SOURCE_URL,
         "son_kontrol_tarihi": datetime.now().isoformat(timespec="seconds"),
+        "son_otomatik_guncelleme": datetime.now().isoformat(timespec="seconds"),
         "toplam": len(records),
         "kategori_sayilari": {category: sum(1 for item in records if item.kategori == category) for category in CATEGORIES},
+        "son_degisim_raporu": change_report,
         "kayitlar": [asdict(record) for record in records],
     }
     JSON_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    CHANGE_REPORT_PATH.write_text(json.dumps(change_report, ensure_ascii=False, indent=2), encoding="utf-8")
     with CSV_PATH.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["kategori", "mevzuat_adı", "tarih", "resmi_link", "kaynak_url"])
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "kategori",
+                "mevzuat_adı",
+                "tarih",
+                "son_degisim_tarihi",
+                "son_degisim_yontemi",
+                "resmi_link",
+                "kaynak_url",
+            ],
+        )
         writer.writeheader()
         writer.writerows(asdict(record) for record in records)
 
@@ -489,6 +674,7 @@ async def main() -> None:
                 return
             raise
         validate(records, previous_records)
+        records = enrich_change_dates(records)
         write_outputs(records)
         if not JSON_PATH.exists():
             raise RuntimeError("JSON çıktı dosyası oluşmadı.")

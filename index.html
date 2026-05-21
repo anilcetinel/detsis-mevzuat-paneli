@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <title>DETSİS Mevzuat Paneli</title>
-    <link rel="stylesheet" href="./styles.css?v=20260520-2" />
+    <link rel="stylesheet" href="./styles.css?v=20260521-sau-1" />
   </head>
   <body>
     <a class="skip-link" href="#records">İçeriğe geç</a>
@@ -35,8 +35,8 @@
           <h1>DETSİS Mevzuat Paneli</h1>
           <p class="lead">Sakarya Üniversitesi mevzuat kayıtları tek ekranda aranabilir, filtrelenebilir ve resmi kaynak bağlantılarıyla izlenebilir.</p>
         </div>
-        <div class="status" aria-label="Son kontrol tarihi">
-          <span>Son kontrol tarihi</span>
+        <div class="status" aria-label="Son veri kontrolü">
+          <span>Son Veri Kontrolü</span>
           <strong id="lastChecked">-</strong>
         </div>
       </div>
@@ -48,6 +48,21 @@
         <div>
           <strong>Veriler DETSİS kaynak sisteminden otomatik güncellenmektedir.</strong>
           <span>Eksik kayıt tespit edilirse scraper başarılı sayılmaz ve hata loguna yazılır.</span>
+          <dl class="source-facts" aria-label="Kurumsal veri bilgileri">
+            <div>
+              <dt>Kaynak</dt>
+              <dd>DETSİS</dd>
+            </div>
+            <div>
+              <dt>Son Veri Kontrolü</dt>
+              <dd id="lastDataCheck">-</dd>
+            </div>
+            <div>
+              <dt>Son Otomatik Güncelleme</dt>
+              <dd id="lastAutoUpdate">-</dd>
+            </div>
+          </dl>
+          <p id="changeReport" class="change-report">Son değişiklik tarihi raporu yükleniyor.</p>
         </div>
       </section>
 
@@ -106,6 +121,6 @@
       © Sakarya Üniversitesi - DETSİS Mevzuat Paneli
     </footer>
 
-    <script src="./app.js?v=20260520-2"></script>
+    <script src="./app.js?v=20260521-sau-1"></script>
   </body>
 </html>

@@ -9,6 +9,9 @@ const state = {
 const els = {
   body: document.body,
   lastChecked: document.querySelector("#lastChecked"),
+  lastDataCheck: document.querySelector("#lastDataCheck"),
+  lastAutoUpdate: document.querySelector("#lastAutoUpdate"),
+  changeReport: document.querySelector("#changeReport"),
   totalCount: document.querySelector("#totalCount"),
   categoryCards: document.querySelector("#categoryCards"),
   latestRecords: document.querySelector("#latestRecords"),
@@ -22,7 +25,13 @@ const els = {
   themeToggle: document.querySelector("#themeToggle"),
 };
 
-const categoryOrder = ["Kurum Yönetmeliği", "Esas ve Usuller", "Yönerge", "İlke Kararı"];
+const categoryOrder = ["Kurum Yönetmeliği", "Yönerge", "Esas ve Usuller", "İlke Kararı"];
+const categoryLabels = {
+  "Kurum Yönetmeliği": "Yönetmelik",
+  "Esas ve Usuller": "Esas ve Usuller",
+  "Yönerge": "Yönerge",
+  "İlke Kararı": "İlke Kararları",
+};
 const collator = new Intl.Collator("tr", { sensitivity: "base" });
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -45,6 +54,10 @@ function parseDate(value) {
   const [, day, month, year] = match;
   const date = new Date(Number(year), Number(month) - 1, Number(day));
   return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function displayDate(value) {
+  return value && value !== "" ? value : "-";
 }
 
 function formatDate(value) {
@@ -111,7 +124,11 @@ function renderSummary() {
   });
 
   animateCount(els.totalCount, state.records.length);
-  els.lastChecked.textContent = formatDate(state.data.son_kontrol_tarihi);
+  const lastCheck = formatDate(state.data.son_kontrol_tarihi);
+  const lastUpdate = formatDate(state.data.son_otomatik_guncelleme || state.data.son_kontrol_tarihi);
+  els.lastChecked.textContent = lastCheck;
+  els.lastDataCheck.textContent = lastCheck;
+  els.lastAutoUpdate.textContent = lastUpdate;
   els.sourceUrl.textContent = state.data.kaynak_url || "";
 
   const cards = document.createDocumentFragment();
@@ -119,12 +136,19 @@ function renderSummary() {
     const card = document.createElement("article");
     card.className = "metric";
     card.innerHTML = `
-      <span>${escapeHtml(category)}</span>
+      <span>${escapeHtml(categoryLabels[category] || category)}</span>
       <strong>${Number(counts[category] || 0).toLocaleString("tr-TR")}</strong>
     `;
     cards.append(card);
   }
   els.categoryCards.replaceChildren(cards);
+
+  const report = state.data.son_degisim_raporu || {};
+  const found = Number(report.bulunan || 0);
+  const missing = Number(report.bulunamayan || Math.max(state.records.length - found, 0));
+  const html = Number(report.html || 0);
+  const pdf = Number(report.pdf || 0);
+  els.changeReport.textContent = `Son değişiklik tarihi: ${found.toLocaleString("tr-TR")} kayıtta bulundu, ${missing.toLocaleString("tr-TR")} kayıtta bulunamadı. Yöntem: HTML ${html.toLocaleString("tr-TR")}, PDF ${pdf.toLocaleString("tr-TR")}.`;
 
   els.categoryFilter.innerHTML = '<option value="">Tüm kategoriler</option>';
   for (const category of categories) {
@@ -137,7 +161,7 @@ function renderSummary() {
 
 function renderLatest() {
   const latest = state.records
-    .map((record) => ({ ...record, parsedDate: parseDate(record.tarih) }))
+    .map((record) => ({ ...record, parsedDate: parseDate(record.son_degisim_tarihi) || parseDate(record.tarih) }))
     .filter((record) => record.parsedDate)
     .sort((a, b) => b.parsedDate - a.parsedDate)
     .slice(0, 5);
@@ -151,7 +175,7 @@ function renderLatest() {
     link.rel = "noopener";
     link.innerHTML = `
       <strong>${escapeHtml(record.mevzuat_adı)}</strong>
-      <span>${escapeHtml(record.kategori)} · ${escapeHtml(record.tarih)}</span>
+      <span>${escapeHtml(record.kategori)} · Son değişiklik: ${escapeHtml(displayDate(record.son_degisim_tarihi))}</span>
     `;
     fragment.append(link);
   }
@@ -162,7 +186,7 @@ function filteredRecords() {
   const query = normalize(state.query);
   return state.records.filter((record) => {
     const matchesCategory = !state.category || record.kategori === state.category;
-    const haystack = normalize(`${record.kategori} ${record.mevzuat_adı} ${record.tarih || ""}`);
+    const haystack = normalize(`${record.kategori} ${record.mevzuat_adı} ${record.tarih || ""} ${record.son_degisim_tarihi || ""}`);
     return matchesCategory && (!query || haystack.includes(query));
   });
 }
@@ -174,8 +198,9 @@ function recordTemplate(record) {
       <div>
         <h3>${escapeHtml(record.mevzuat_adı)}</h3>
         <div class="meta">
-          <span class="pill">${escapeHtml(record.kategori)}</span>
-          <span class="pill">Tarih: ${escapeHtml(record.tarih || "-")}</span>
+          <span class="pill pill-category">${escapeHtml(record.kategori)}</span>
+          <span class="pill pill-date">Yürürlük: ${escapeHtml(displayDate(record.tarih))}</span>
+          <span class="pill pill-change">Son değişiklik: ${escapeHtml(displayDate(record.son_degisim_tarihi))}</span>
         </div>
       </div>
       <a class="open-link ${hasLink ? "" : "disabled"}" href="${hasLink ? escapeHtml(record.resmi_link) : "#"}" target="_blank" rel="noopener" aria-label="${escapeHtml(record.mevzuat_adı)} resmi kaydını yeni sekmede aç">
