@@ -107,14 +107,17 @@ def append_new_records(records: list["Regulation"]) -> None:
 
 
 def load_previous_records() -> list[dict[str, str]]:
+    return load_previous_payload().get("kayitlar", [])
+
+
+def load_previous_payload() -> dict[str, object]:
     if not JSON_PATH.exists():
-        return []
+        return {}
     try:
-        payload = json.loads(JSON_PATH.read_text(encoding="utf-8"))
+        return json.loads(JSON_PATH.read_text(encoding="utf-8"))
     except Exception as exc:
         append_error("Önceki JSON okunamadı", str(exc))
-        return []
-    return payload.get("kayitlar", [])
+        return {}
 
 
 def previous_records_are_valid(records: list[dict[str, str]]) -> bool:
@@ -122,6 +125,23 @@ def previous_records_are_valid(records: list[dict[str, str]]) -> bool:
         append_error("Mevcut veri geçersiz", "Önceki JSON içinde kayıt yok.")
         return False
     return True
+
+
+def previous_dicts_to_records(records: list[dict[str, str]]) -> list[Regulation]:
+    normalized: list[Regulation] = []
+    for record in records:
+        normalized.append(
+            Regulation(
+                kategori=record.get("kategori", ""),
+                mevzuat_adı=record.get("mevzuat_adı", ""),
+                tarih=record.get("tarih") or "-",
+                resmi_link=record.get("resmi_link", ""),
+                kaynak_url=record.get("kaynak_url") or SOURCE_URL,
+                son_degisim_tarihi=record.get("son_degisim_tarihi") or "-",
+                son_degisim_yontemi=record.get("son_degisim_yontemi") or "Bulunamadı",
+            )
+        )
+    return normalized
 
 
 async def click_text(page: Page, text: str, timeout: int = 8_000) -> bool:
@@ -642,15 +662,27 @@ def build_change_report(records: list[Regulation]) -> dict[str, object]:
     }
 
 
-def write_outputs(records: list[Regulation]) -> None:
+def write_outputs(
+    records: list[Regulation],
+    *,
+    status: str = "success",
+    status_message: str = "DETSİS verisi başarıyla güncellendi.",
+    previous_payload: dict[str, object] | None = None,
+) -> None:
     ensure_dirs()
     archive_existing_data()
     log("JSON ve CSV çıktıları yazılıyor.")
     change_report = build_change_report(records)
+    now = datetime.now().isoformat(timespec="seconds")
+    successful_check = now if status == "success" else str((previous_payload or {}).get("son_basarili_veri_kontrolu") or (previous_payload or {}).get("son_kontrol_tarihi") or "")
     payload = {
         "kaynak_url": SOURCE_URL,
-        "son_kontrol_tarihi": datetime.now().isoformat(timespec="seconds"),
-        "son_otomatik_guncelleme": datetime.now().isoformat(timespec="seconds"),
+        "son_kontrol_tarihi": successful_check,
+        "son_basarili_veri_kontrolu": successful_check,
+        "son_otomatik_deneme": now,
+        "son_otomatik_guncelleme": now,
+        "guncelleme_durumu": status,
+        "guncelleme_mesaji": status_message,
         "toplam": len(records),
         "kategori_sayilari": {category: sum(1 for item in records if item.kategori == category) for category in CATEGORIES},
         "son_degisim_raporu": change_report,
@@ -678,7 +710,8 @@ def write_outputs(records: list[Regulation]) -> None:
 async def main() -> None:
     ensure_dirs()
     try:
-        previous_records = load_previous_records()
+        previous_payload = load_previous_payload()
+        previous_records = previous_payload.get("kayitlar", [])
         log(f"Önceki kayıt sayısı: {len(previous_records)}")
         try:
             records = await scrape_with_retries()
@@ -687,11 +720,18 @@ async def main() -> None:
             if previous_records_are_valid(previous_records) and JSON_PATH.exists() and CSV_PATH.exists():
                 log("UYARI: Canlı scrape başarısız oldu ancak mevcut JSON/CSV geçerli. Workflow yeşil kalacak, mevcut veri korunacak.")
                 log(f"Korunan kayıt sayısı: {len(previous_records)}")
+                fallback_records = previous_dicts_to_records(previous_records)
+                write_outputs(
+                    fallback_records,
+                    status="warning",
+                    status_message=f"DETSİS erişilemedi, mevcut veri korundu: {type(scrape_exc).__name__}: {scrape_exc}",
+                    previous_payload=previous_payload,
+                )
                 return
             raise
         validate(records, previous_records)
         records = enrich_change_dates(records)
-        write_outputs(records)
+        write_outputs(records, previous_payload=previous_payload)
         if not JSON_PATH.exists():
             raise RuntimeError("JSON çıktı dosyası oluşmadı.")
         log(f"Başarılı: {len(records)} kayıt yazıldı.")

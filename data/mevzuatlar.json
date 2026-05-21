@@ -2053,7 +2053,7 @@
       "son_degisim_yontemi": "Bulunamad?"
     }
   ],
-  "son_otomatik_guncelleme": "2026-05-20T17:17:15",
+  "son_otomatik_guncelleme": "2026-05-21T11:25:13",
   "son_degisim_raporu": {
     "toplam": 227,
     "bulunan": 0,
@@ -2070,5 +2070,9 @@
       "PDF": "Resmi kay?t sayfas?ndan bulunan PDF i?inde de?i?iklik tarihi ifadeleri",
       "Bulunamad?": "Son de?i?iklik tarihi bulunamad? veya PDF indirilemedi; workflow bu nedenle ba?ar?s?z say?lmaz"
     }
-  }
+  },
+  "son_basarili_veri_kontrolu": "2026-05-20T17:17:15",
+  "son_otomatik_deneme": "2026-05-21T11:25:13",
+  "guncelleme_durumu": "warning",
+  "guncelleme_mesaji": "DETS?S son otomatik denemede eri?ilemedi, mevcut ge?erli veri korundu."
 }
