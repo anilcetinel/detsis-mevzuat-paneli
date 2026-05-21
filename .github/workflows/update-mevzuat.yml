@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  PYTHONUNBUFFERED: "1"
+
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -34,7 +38,12 @@ jobs:
 
       - name: DETSİS scraper çalıştır
         run: |
-          set -e
+          set -Eeuo pipefail
+          trap 'echo "::error::DETSİS scraper adımı başarısız oldu."; echo "---- logs/hata_log.csv ----"; test -f logs/hata_log.csv && tail -n 80 logs/hata_log.csv || echo "hata_log.csv yok"; echo "---- logs/new_records.log ----"; test -f logs/new_records.log && tail -n 80 logs/new_records.log || echo "new_records.log yok"; echo "---- data klasörü ----"; ls -la data || true' ERR
+          echo "Python sürümü:"
+          python --version
+          echo "Çalışma dizini: $PWD"
+          echo "Kaynak URL scraper.py içinde tanımlıdır."
           echo "DETSİS scraper başlatılıyor..."
           python scraper.py
           echo "Scraper tamamlandı. Üretilen veri özeti:"
@@ -47,11 +56,25 @@ jobs:
               raise SystemExit("HATA: data/mevzuatlar.json oluşmadı.")
 
           data = json.loads(path.read_text(encoding="utf-8"))
+          total = data.get("toplam")
+          records = data.get("kayitlar") or []
+          if not records:
+              raise SystemExit("HATA: JSON oluştu ama kayıt listesi boş.")
           print(f"Toplam kayıt: {data.get('toplam')}")
+          if total != len(records):
+              raise SystemExit(f"HATA: toplam alanı ({total}) kayıt listesiyle ({len(records)}) eşleşmiyor.")
           print("Kategori sayıları:")
           for category, count in data.get("kategori_sayilari", {}).items():
               print(f"- {category}: {count}")
           PY
+
+      - name: DETSİS loglarını göster
+        if: always()
+        run: |
+          echo "---- logs/hata_log.csv (son 80 satır) ----"
+          test -f logs/hata_log.csv && tail -n 80 logs/hata_log.csv || echo "hata_log.csv yok"
+          echo "---- logs/new_records.log (son 80 satır) ----"
+          test -f logs/new_records.log && tail -n 80 logs/new_records.log || echo "new_records.log yok"
 
       - name: Veri değiştiyse commit at
         uses: stefanzweifel/git-auto-commit-action@v5

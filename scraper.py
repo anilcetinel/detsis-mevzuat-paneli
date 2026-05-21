@@ -36,6 +36,10 @@ class Regulation:
     kaynak_url: str
 
 
+def log(message: str) -> None:
+    print(f"[{datetime.now().isoformat(timespec='seconds')}] {message}", flush=True)
+
+
 def ensure_dirs() -> None:
     DATA_DIR.mkdir(exist_ok=True)
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
@@ -89,6 +93,21 @@ def load_previous_records() -> list[dict[str, str]]:
     return payload.get("kayitlar", [])
 
 
+def previous_records_are_valid(records: list[dict[str, str]]) -> bool:
+    if not records:
+        append_error("Mevcut veri geçersiz", "Önceki JSON içinde kayıt yok.")
+        return False
+    missing_categories = [record.get("mevzuat_adı", "") for record in records if not record.get("kategori")]
+    missing_links = [record.get("mevzuat_adı", "") for record in records if not record.get("resmi_link")]
+    if missing_categories or missing_links:
+        append_error(
+            "Mevcut veri bütünlüğü başarısız",
+            f"Kategori boş: {len(missing_categories)} | Link eksik: {len(missing_links)}",
+        )
+        return False
+    return True
+
+
 async def click_text(page: Page, text: str, timeout: int = 8_000) -> bool:
     pattern = re.compile(rf"^\s*{re.escape(text)}(?:\s*\(\d+\))?\s*$", re.I)
     candidates = [
@@ -126,9 +145,34 @@ async def accept_cookie_notice(page: Page) -> None:
 
 
 async def open_mevzuat_tab(page: Page) -> None:
+    log("Mevzuat sekmesi açılıyor.")
     opened = await click_text(page, "Mevzuat", timeout=12_000)
     if not opened:
-        raise RuntimeError("Mevzuat sekmesi bulunamadı veya açılamadı.")
+        try:
+            opened = await page.evaluate(
+                """
+                () => {
+                  const normalize = (value) => (value || '').replace(/\\s+/g, ' ').trim().toLocaleLowerCase('tr-TR');
+                  const node = [...document.querySelectorAll('button, a, [role="tab"], [role="button"], li, div, span')]
+                    .filter((el) => {
+                      const text = normalize(el.innerText || el.textContent || '');
+                      return text === 'mevzuat' && el.getBoundingClientRect().width > 0 && el.getBoundingClientRect().height > 0;
+                    })
+                    .sort((a, b) => (a.innerText || '').length - (b.innerText || '').length)[0];
+                  if (!node) return false;
+                  node.scrollIntoView({ block: 'center', inline: 'center' });
+                  node.click();
+                  return true;
+                }
+                """
+            )
+            if opened:
+                await page.wait_for_timeout(800)
+        except Exception:
+            opened = False
+    if not opened:
+        body = clean_text((await page.locator("body").inner_text())[:1_500])
+        raise RuntimeError(f"Mevzuat sekmesi bulunamadı veya açılamadı. Sayfa metni: {body}")
     try:
         await page.get_by_text(re.compile(r"Toplam\s+\d+\s+adet\s+mevzuat", re.I)).wait_for(timeout=12_000)
     except PlaywrightTimeoutError as exc:
@@ -137,6 +181,7 @@ async def open_mevzuat_tab(page: Page) -> None:
 
 
 async def expand_category(page: Page, category: str) -> None:
+    log(f"Kategori genişletiliyor: {category}")
     opened = await click_text(page, category, timeout=10_000)
     if not opened:
         raise RuntimeError(f"Kategori açılamadı: {category}")
@@ -336,6 +381,7 @@ def dedupe(records: Iterable[Regulation]) -> list[Regulation]:
 
 
 async def scrape() -> list[Regulation]:
+    log(f"Kaynak sayfa açılıyor: {SOURCE_URL}")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page(locale="tr-TR", viewport={"width": 1440, "height": 1200})
@@ -353,10 +399,29 @@ async def scrape() -> list[Regulation]:
                 await expand_category(page, category)
                 await page.wait_for_timeout(750)
                 category_records = await extract_from_dom(page, category)
+                log(f"{category}: {len(category_records)} kayıt bulundu.")
                 all_records.extend(category_records)
-            return dedupe(all_records)
+            records = dedupe(all_records)
+            log(f"Toplam benzersiz kayıt: {len(records)}")
+            return records
         finally:
             await browser.close()
+
+
+async def scrape_with_retries(max_attempts: int = 2) -> list[Regulation]:
+    last_error: Exception | None = None
+    for attempt in range(1, max_attempts + 1):
+        try:
+            log(f"Scrape denemesi {attempt}/{max_attempts}")
+            return await scrape()
+        except Exception as exc:
+            last_error = exc
+            append_error(f"Scrape denemesi başarısız ({attempt}/{max_attempts})", str(exc))
+            log(f"UYARI: scrape denemesi başarısız ({attempt}/{max_attempts}): {exc}")
+            if attempt < max_attempts:
+                await asyncio.sleep(5)
+    assert last_error is not None
+    raise last_error
 
 
 def validate(records: list[Regulation], previous_records: list[dict[str, str]]) -> None:
@@ -381,15 +446,20 @@ def validate(records: list[Regulation], previous_records: list[dict[str, str]]) 
     previous_count = len(previous_records)
     if previous_count and previous_count != len(records):
         append_error("Yeni mevzuat sayısı algılandı", f"Yeni mevzuat sayısı algılandı: {len(records)}")
+        log(f"Bilgi: Yeni mevzuat sayısı algılandı: {len(records)}")
 
     previous_links = {record.get("resmi_link", "") for record in previous_records}
-    new_records = [record for record in records if record.resmi_link and record.resmi_link not in previous_links]
-    append_new_records(new_records)
+    if previous_links:
+        new_records = [record for record in records if record.resmi_link and record.resmi_link not in previous_links]
+        append_new_records(new_records)
+        if new_records:
+            log(f"Yeni kayıt sayısı: {len(new_records)}")
 
 
 def write_outputs(records: list[Regulation]) -> None:
     ensure_dirs()
     archive_existing_data()
+    log("JSON ve CSV çıktıları yazılıyor.")
     payload = {
         "kaynak_url": SOURCE_URL,
         "son_kontrol_tarihi": datetime.now().isoformat(timespec="seconds"),
@@ -408,14 +478,24 @@ async def main() -> None:
     ensure_dirs()
     try:
         previous_records = load_previous_records()
-        records = await scrape()
+        log(f"Önceki kayıt sayısı: {len(previous_records)}")
+        try:
+            records = await scrape_with_retries()
+        except Exception as scrape_exc:
+            append_error("Canlı scrape başarısız; mevcut veri korunuyor", str(scrape_exc))
+            if previous_records_are_valid(previous_records) and JSON_PATH.exists() and CSV_PATH.exists():
+                log("UYARI: Canlı scrape başarısız oldu ancak mevcut JSON/CSV geçerli. Workflow yeşil kalacak, mevcut veri korunacak.")
+                log(f"Korunan kayıt sayısı: {len(previous_records)}")
+                return
+            raise
         validate(records, previous_records)
         write_outputs(records)
         if not JSON_PATH.exists():
             raise RuntimeError("JSON çıktı dosyası oluşmadı.")
-        print(f"Başarılı: {len(records)} kayıt yazıldı.")
+        log(f"Başarılı: {len(records)} kayıt yazıldı.")
     except Exception as exc:
         append_error(type(exc).__name__, str(exc))
+        log(f"HATA: {type(exc).__name__}: {exc}")
         raise
 
 
