@@ -2,10 +2,10 @@
   "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
   "son_kontrol_tarihi": "2026-05-20T17:17:15",
   "son_basarili_veri_kontrolu": "2026-05-20T17:17:15",
-  "son_otomatik_deneme": "2026-05-21T09:12:14",
-  "son_otomatik_guncelleme": "2026-05-21T09:12:14",
+  "son_otomatik_deneme": "2026-05-21T08:30:48",
+  "son_otomatik_guncelleme": "2026-05-21T08:30:48",
   "guncelleme_durumu": "warning",
-  "guncelleme_mesaji": "DETSİS erişilemedi, mevcut veri korundu: TimeoutError: Page.goto: Timeout 120000ms exceeded.\nCall log:\n  - navigating to \"https://detsis.gov.tr/birim/35955870/35955870/2026-05-20\", waiting until \"commit\"\n",
+  "guncelleme_mesaji": "DETSİS erişilemedi, mevcut veri korundu: TimeoutError: Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://detsis.gov.tr/birim/35955870/35955870/2026-05-20\", waiting until \"domcontentloaded\"\n",
   "toplam": 227,
   "kategori_sayilari": {
     "Kurum Yönetmeliği": 51,
@@ -23,7 +23,7 @@
     "pdf_indirilemeyen": 0,
     "hata_sayisi": 0,
     "hatalar": [],
-    "olusturma_tarihi": "2026-05-21T09:12:14",
+    "olusturma_tarihi": "2026-05-21T08:30:48",
     "yontemler": {
       "HTML": "DETSİS resmi kayıt sayfasındaki son güncelleme, revizyon veya değişiklik tarihi alanı",
       "PDF": "Resmi kayıt sayfasından bulunan PDF içinde değişiklik tarihi ifadeleri",
