@@ -22,8 +22,8 @@ env:
   PYTHONUNBUFFERED: "1"
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: detsis-mevzuat-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   scrape:
@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Depoyu al
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Python kur
         uses: actions/setup-python@v5
@@ -100,11 +102,29 @@ jobs:
           echo "---- logs/son_degisim_raporu.json ----"
           test -f logs/son_degisim_raporu.json && cat logs/son_degisim_raporu.json || echo "son_degisim_raporu.json yok"
 
-      - name: Veri değiştiyse commit at
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "data: DETSIS mevzuat verisini güncelle"
-          file_pattern: "data/mevzuatlar.json data/mevzuatlar.csv data/archive/*.json logs/hata_log.csv logs/new_records.log logs/son_degisim_raporu.json"
+      - name: Veri değiştiyse commit ve push yap
+        run: |
+          set -Eeuo pipefail
+          echo "Commit öncesi uzak main ile senkronize ediliyor."
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
+
+          git add -- data/mevzuatlar.json data/mevzuatlar.csv
+          test -f logs/hata_log.csv && git add -- logs/hata_log.csv || true
+          test -f logs/new_records.log && git add -- logs/new_records.log || true
+          test -f logs/son_degisim_raporu.json && git add -- logs/son_degisim_raporu.json || true
+          if compgen -G "data/archive/*.json" > /dev/null; then
+            git add -- data/archive/*.json
+          fi
+          if git diff --cached --quiet; then
+            echo "Veri değişikliği yok, commit atılmayacak."
+            exit 0
+          fi
+
+          git commit -m "data: DETSIS mevzuat verisini güncelle"
+          echo "Commit sonrası push deneniyor."
+          git push origin HEAD:main
 
   deploy:
     needs: scrape
