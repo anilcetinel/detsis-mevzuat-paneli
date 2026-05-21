@@ -836,15 +836,8 @@ async def main() -> None:
         except Exception as scrape_exc:
             append_error("Canlı scrape başarısız; mevcut veri korunuyor", str(scrape_exc))
             if previous_records_are_valid(previous_records) and JSON_PATH.exists() and CSV_PATH.exists():
-                log("UYARI: Canlı scrape başarısız oldu ancak mevcut JSON/CSV geçerli. Workflow yeşil kalacak, mevcut veri korunacak.")
+                log("UYARI: Canlı scrape başarısız oldu ancak mevcut JSON/CSV geçerli. Public veri dosyası son başarılı kontrol halinde korunacak.")
                 log(f"Korunan kayıt sayısı: {len(previous_records)}")
-                fallback_records = previous_dicts_to_records(previous_records)
-                write_outputs(
-                    fallback_records,
-                    status="warning",
-                    status_message=f"DETSİS erişilemedi, mevcut veri korundu: {type(scrape_exc).__name__}: {scrape_exc}",
-                    previous_payload=previous_payload,
-                )
                 return
             raise
         validate(records, previous_records)
