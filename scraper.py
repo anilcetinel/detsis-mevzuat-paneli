@@ -20,6 +20,8 @@ from playwright.async_api import Page, TimeoutError as PlaywrightTimeoutError, a
 
 
 SOURCE_URL = "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"
+DETSIS_ID = "35955870"
+MEVZUAT_API_URL = f"https://yetkiliapi.detsis.gov.tr/api/backoffice/unauthorizedintegration/kunye/mevzuatlar?detsisId={DETSIS_ID}"
 CATEGORIES = ["Kurum Yönetmeliği", "Esas ve Usuller", "Yönerge", "İlke Kararı"]
 
 ROOT = Path(__file__).resolve().parent
@@ -321,6 +323,16 @@ def format_short_date(value: datetime) -> str:
     return value.strftime("%d.%m.%Y")
 
 
+def format_api_date(value: str) -> str:
+    if not value:
+        return "-"
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00")).strftime("%d/%m/%Y")
+    except ValueError:
+        parsed = parse_date_value(value)
+        return parsed.strftime("%d/%m/%Y") if parsed else "-"
+
+
 def fetch_bytes(url: str, timeout: int = 18) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(request, timeout=timeout) as response:
@@ -330,6 +342,21 @@ def fetch_bytes(url: str, timeout: int = 18) -> bytes:
 def fetch_text(url: str, timeout: int = 18) -> str:
     body = fetch_bytes(url, timeout=timeout)
     return body.decode("utf-8", errors="ignore")
+
+
+def fetch_json(url: str, timeout: int = 45) -> dict[str, object]:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "application/json, text/plain, */*",
+            "Origin": "https://detsis.gov.tr",
+            "Referer": SOURCE_URL,
+        },
+    )
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        charset = response.headers.get_content_charset() or "utf-8"
+        return json.loads(response.read().decode(charset, errors="ignore"))
 
 
 def strip_html(value: str) -> str:
@@ -579,6 +606,52 @@ def dedupe(records: Iterable[Regulation]) -> list[Regulation]:
 
 
 async def scrape() -> list[Regulation]:
+    try:
+        return scrape_from_api()
+    except Exception as exc:
+        append_error("DETSİS mevzuat API başarısız; arayüz fallback deneniyor", str(exc))
+        log(f"UYARI: API scrape başarısız, arayüz fallback deneniyor: {exc}")
+    return await scrape_from_page()
+
+
+def scrape_from_api() -> list[Regulation]:
+    log(f"DETSİS mevzuat API okunuyor: {MEVZUAT_API_URL}")
+    payload = fetch_json(MEVZUAT_API_URL)
+    items = payload.get("data")
+    if not isinstance(items, list):
+        raise RuntimeError("DETSİS mevzuat API beklenen listeyi döndürmedi.")
+
+    records: list[Regulation] = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        category = clean_text(str(item.get("tur") or ""))
+        if category not in CATEGORIES:
+            continue
+        regulation_id = str(item.get("mevzuatId") or "").strip()
+        name = clean_regulation_name(str(item.get("ad") or ""))
+        if not name:
+            continue
+        records.append(
+            Regulation(
+                kategori=category,
+                mevzuat_adı=name,
+                tarih=format_api_date(str(item.get("rgTarih") or "")),
+                resmi_link=f"https://kms.kaysis.gov.tr/Home/Goster/{regulation_id}" if regulation_id else "",
+                kaynak_url=SOURCE_URL,
+            )
+        )
+
+    records = dedupe(records)
+    log(f"DETSİS API toplam benzersiz kayıt: {len(records)}")
+    for category in CATEGORIES:
+        log(f"{category}: {sum(1 for record in records if record.kategori == category)} kayıt")
+    if not records:
+        raise RuntimeError("DETSİS mevzuat API 0 kayıt döndürdü.")
+    return records
+
+
+async def scrape_from_page() -> list[Regulation]:
     log(f"Kaynak sayfa açılıyor: {SOURCE_URL}")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--disable-dev-shm-usage", "--no-sandbox"])
