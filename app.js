@@ -130,8 +130,10 @@ function renderSummary() {
   animateCount(els.totalCount, state.records.length);
   const lastCheck = formatDate(state.data.son_basarili_veri_kontrolu || state.data.son_kontrol_tarihi);
   const lastAttempt = formatDate(state.data.son_otomatik_deneme || state.data.son_otomatik_guncelleme || state.data.son_kontrol_tarihi);
-  const isWarning = state.data.guncelleme_durumu === "warning";
-  setText(els.lastChecked, isWarning ? "Kontrol edildi, veri korunuyor" : "Güncellendi");
+  const status = state.data.guncelleme_durumu || "success";
+  const isWarning = status === "warning";
+  const statusLabel = status === "checked" ? "Kontrol edildi, değişiklik yok" : status === "updated" || status === "success" ? "Güncellendi" : "DETSİS erişilemedi";
+  setText(els.lastChecked, statusLabel);
   setText(els.lastDataCheck, lastCheck);
   setText(els.lastAutoUpdate, lastAttempt);
   setText(els.sourceUrl, state.data.kaynak_url || "");
@@ -152,7 +154,7 @@ function renderSummary() {
     els.updateStatusText,
     isWarning
       ? "Son otomatik kontrolde DETSİS erişilemedi; mevcut geçerli veri korunuyor."
-      : "Son otomatik kontrolde DETSİS verisi başarıyla güncellendi.",
+      : state.data.guncelleme_mesaji || "Son otomatik kontrolde DETSİS başarıyla kontrol edildi.",
   );
 
   els.categoryFilter.innerHTML = '<option value="">Tüm kategoriler</option>';

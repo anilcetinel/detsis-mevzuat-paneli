@@ -34,6 +34,10 @@ CHANGE_REPORT_PATH = LOG_DIR / "son_degisim_raporu.json"
 USER_AGENT = "Mozilla/5.0 (compatible; DETSIS-Mevzuat-Paneli/1.0)"
 LOG_LOCK = threading.Lock()
 CHANGE_DATE_ERRORS: list[dict[str, str]] = []
+PAGE_GOTO_TIMEOUT_MS = 120_000
+NETWORK_IDLE_TIMEOUT_MS = 45_000
+SCRAPE_MAX_ATTEMPTS = 4
+SCRAPE_RETRY_DELAY_SECONDS = 20
 
 
 @dataclass(frozen=True)
@@ -144,6 +148,32 @@ def previous_dicts_to_records(records: list[dict[str, str]]) -> list[Regulation]
     return normalized
 
 
+def record_fingerprint(record: Regulation | dict[str, str]) -> tuple[str, str, str, str, str]:
+    if isinstance(record, Regulation):
+        return (
+            record.kategori,
+            record.mevzuat_adı,
+            record.tarih,
+            record.resmi_link,
+            record.son_degisim_tarihi,
+        )
+    return (
+        record.get("kategori", ""),
+        record.get("mevzuat_adı", ""),
+        record.get("tarih", ""),
+        record.get("resmi_link", ""),
+        record.get("son_degisim_tarihi", ""),
+    )
+
+
+def records_changed(records: list[Regulation], previous_records: list[dict[str, str]]) -> bool:
+    if len(records) != len(previous_records):
+        return True
+    current = sorted(record_fingerprint(record) for record in records)
+    previous = sorted(record_fingerprint(record) for record in previous_records)
+    return current != previous
+
+
 async def click_text(page: Page, text: str, timeout: int = 8_000) -> bool:
     pattern = re.compile(rf"^\s*{re.escape(text)}(?:\s*\(\d+\))?\s*$", re.I)
     candidates = [
@@ -178,6 +208,10 @@ async def accept_cookie_notice(page: Page) -> None:
             return
         except Exception:
             continue
+
+
+async def abort_heavy_assets(route) -> None:
+    await route.abort()
 
 
 async def open_mevzuat_tab(page: Page) -> None:
@@ -547,14 +581,24 @@ def dedupe(records: Iterable[Regulation]) -> list[Regulation]:
 async def scrape() -> list[Regulation]:
     log(f"Kaynak sayfa açılıyor: {SOURCE_URL}")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        browser = await p.chromium.launch(headless=True, args=["--disable-dev-shm-usage", "--no-sandbox"])
         page = await browser.new_page(locale="tr-TR", viewport={"width": 1440, "height": 1200})
+        page.set_default_timeout(30_000)
+        await page.set_extra_http_headers({"User-Agent": USER_AGENT})
+        await page.route(
+            re.compile(r".*\.(?:png|jpg|jpeg|gif|webp|svg|ico|woff|woff2|ttf|mp4|webm)(?:\?.*)?$", re.I),
+            abort_heavy_assets,
+        )
         try:
-            await page.goto(SOURCE_URL, wait_until="domcontentloaded", timeout=60_000)
+            await page.goto(SOURCE_URL, wait_until="commit", timeout=PAGE_GOTO_TIMEOUT_MS)
             try:
-                await page.wait_for_load_state("networkidle", timeout=20_000)
+                await page.wait_for_load_state("domcontentloaded", timeout=PAGE_GOTO_TIMEOUT_MS)
             except PlaywrightTimeoutError:
-                pass
+                log("UYARI: domcontentloaded beklemesi zaman aşımına uğradı, mevcut DOM ile devam ediliyor.")
+            try:
+                await page.wait_for_load_state("networkidle", timeout=NETWORK_IDLE_TIMEOUT_MS)
+            except PlaywrightTimeoutError:
+                log("UYARI: networkidle beklemesi zaman aşımına uğradı, mevcut DOM ile devam ediliyor.")
             await accept_cookie_notice(page)
             await open_mevzuat_tab(page)
 
@@ -572,7 +616,7 @@ async def scrape() -> list[Regulation]:
             await browser.close()
 
 
-async def scrape_with_retries(max_attempts: int = 2) -> list[Regulation]:
+async def scrape_with_retries(max_attempts: int = SCRAPE_MAX_ATTEMPTS) -> list[Regulation]:
     last_error: Exception | None = None
     for attempt in range(1, max_attempts + 1):
         try:
@@ -583,7 +627,7 @@ async def scrape_with_retries(max_attempts: int = 2) -> list[Regulation]:
             append_error(f"Scrape denemesi başarısız ({attempt}/{max_attempts})", str(exc))
             log(f"UYARI: scrape denemesi başarısız ({attempt}/{max_attempts}): {exc}")
             if attempt < max_attempts:
-                await asyncio.sleep(5)
+                await asyncio.sleep(SCRAPE_RETRY_DELAY_SECONDS)
     assert last_error is not None
     raise last_error
 
@@ -674,7 +718,8 @@ def write_outputs(
     log("JSON ve CSV çıktıları yazılıyor.")
     change_report = build_change_report(records)
     now = datetime.now().isoformat(timespec="seconds")
-    successful_check = now if status == "success" else str((previous_payload or {}).get("son_basarili_veri_kontrolu") or (previous_payload or {}).get("son_kontrol_tarihi") or "")
+    successful_statuses = {"success", "updated", "checked"}
+    successful_check = now if status in successful_statuses else str((previous_payload or {}).get("son_basarili_veri_kontrolu") or (previous_payload or {}).get("son_kontrol_tarihi") or "")
     payload = {
         "kaynak_url": SOURCE_URL,
         "son_kontrol_tarihi": successful_check,
@@ -731,7 +776,17 @@ async def main() -> None:
             raise
         validate(records, previous_records)
         records = enrich_change_dates(records)
-        write_outputs(records, previous_payload=previous_payload)
+        changed = records_changed(records, previous_records)
+        write_outputs(
+            records,
+            status="updated" if changed else "checked",
+            status_message=(
+                "DETSİS başarıyla kontrol edildi ve veri güncellendi."
+                if changed
+                else "DETSİS başarıyla kontrol edildi, değişiklik yok."
+            ),
+            previous_payload=previous_payload,
+        )
         if not JSON_PATH.exists():
             raise RuntimeError("JSON çıktı dosyası oluşmadı.")
         log(f"Başarılı: {len(records)} kayıt yazıldı.")
