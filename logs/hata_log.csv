@@ -2178,3 +2178,27 @@ Found"
 2026-05-21T14:15:52,Resmi DETSİS sayfası okunamadı,"https://kms.kaysis.gov.tr/Home/Goster/160104 | HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.
 The last 30x error message was:
 Found"
+2026-05-21T11:20:04,DETSİS mevzuat API başarısız; arayüz fallback deneniyor,<urlopen error timed out>
+2026-05-21T11:22:04,Scrape denemesi başarısız (1/4),"Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
+"
+2026-05-21T11:23:10,DETSİS mevzuat API başarısız; arayüz fallback deneniyor,<urlopen error timed out>
+2026-05-21T11:25:10,Scrape denemesi başarısız (2/4),"Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
+"
+2026-05-21T11:26:16,DETSİS mevzuat API başarısız; arayüz fallback deneniyor,<urlopen error timed out>
+2026-05-21T11:28:16,Scrape denemesi başarısız (3/4),"Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
+"
+2026-05-21T11:29:22,DETSİS mevzuat API başarısız; arayüz fallback deneniyor,<urlopen error timed out>
+2026-05-21T11:31:22,Scrape denemesi başarısız (4/4),"Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
+"
+2026-05-21T11:31:22,Canlı scrape başarısız; mevcut veri korunuyor,"Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
+"
