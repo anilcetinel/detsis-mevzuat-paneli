@@ -22,7 +22,7 @@ from playwright.async_api import Page, TimeoutError as PlaywrightTimeoutError, a
 SOURCE_URL = "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"
 DETSIS_ID = "35955870"
 MEVZUAT_API_URL = f"https://yetkiliapi.detsis.gov.tr/api/backoffice/unauthorizedintegration/kunye/mevzuatlar?detsisId={DETSIS_ID}"
-CATEGORIES = ["Kurum Yönetmeliği", "Esas ve Usuller", "Yönerge", "İlke Kararı"]
+CATEGORIES = ["Kurum Yönetmeliği", "Yönerge", "Esas ve Usuller", "Uygulama / Program Esasları", "İlke Kararı"]
 
 ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"

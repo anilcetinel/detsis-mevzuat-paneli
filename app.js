@@ -25,11 +25,12 @@ const els = {
   themeToggle: document.querySelector("#themeToggle"),
 };
 
-const categoryOrder = ["Kurum Yönetmeliği", "Yönerge", "Esas ve Usuller", "İlke Kararı"];
+const categoryOrder = ["Kurum Yönetmeliği", "Yönerge", "Esas ve Usuller", "Uygulama / Program Esasları", "İlke Kararı"];
 const categoryLabels = {
   "Kurum Yönetmeliği": "Yönetmelik",
   "Esas ve Usuller": "Esas ve Usuller",
   "Yönerge": "Yönerge",
+  "Uygulama / Program Esasları": "Uygulama / Program Esasları",
   "İlke Kararı": "İlke Kararları",
 };
 const collator = new Intl.Collator("tr", { sensitivity: "base" });
@@ -182,7 +183,7 @@ function renderLatest() {
     link.rel = "noopener";
     link.innerHTML = `
       <strong>${escapeHtml(record.mevzuat_adı)}</strong>
-      <span>${escapeHtml(record.kategori)} · Son değişiklik: ${escapeHtml(displayDate(record.son_degisim_tarihi))}</span>
+      <span>${escapeHtml(record.kategori)} · Yürürlük: ${escapeHtml(displayDate(record.tarih))}</span>
     `;
     fragment.append(link);
   }
