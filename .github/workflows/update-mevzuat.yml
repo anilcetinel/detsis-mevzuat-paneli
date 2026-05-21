@@ -51,6 +51,12 @@ jobs:
           python --version
           echo "Çalışma dizini: $PWD"
           echo "Kaynak URL scraper.py içinde tanımlıdır."
+          echo "PDF/son değişiklik tarihi bağımlılık kontrolü:"
+          python - <<'PY'
+          import importlib.util
+          print(f"- pypdf: {'var' if importlib.util.find_spec('pypdf') else 'YOK'}")
+          print("- Son değişiklik tarihi bulunamazsa workflow başarısız sayılmaz; kayıt '-' / 'Bulunamadı' olarak yazılır.")
+          PY
           echo "DETSİS scraper başlatılıyor..."
           python scraper.py
           echo "Scraper tamamlandı. Üretilen veri özeti:"
@@ -79,6 +85,9 @@ jobs:
           print(f"- Bulunamayan: {report.get('bulunamayan', 0)}")
           print(f"- HTML: {report.get('html', 0)}")
           print(f"- PDF: {report.get('pdf', 0)}")
+          print(f"- Bulunamadı: {report.get('bulunamadi', report.get('bulunamayan', 0))}")
+          print(f"- PDF indirilemeyen/okunamayan: {report.get('pdf_indirilemeyen', 0)}")
+          print(f"- Son değişiklik hata sayısı: {report.get('hata_sayisi', 0)}")
           PY
 
       - name: DETSİS loglarını göster

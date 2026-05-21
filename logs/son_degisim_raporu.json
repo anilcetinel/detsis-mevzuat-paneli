@@ -4,10 +4,14 @@
   "bulunamayan": 227,
   "html": 0,
   "pdf": 0,
-  "olusturma_tarihi": "2026-05-21T10:24:56",
+  "bulunamadi": 227,
+  "pdf_indirilemeyen": 0,
+  "hata_sayisi": 0,
+  "hatalar": [],
+  "olusturma_tarihi": "2026-05-20T17:17:15",
   "yontemler": {
     "HTML": "DETS?S resmi kay?t sayfas?ndaki son g?ncelleme, revizyon veya de?i?iklik tarihi alan?",
     "PDF": "Resmi kay?t sayfas?ndan bulunan PDF i?inde de?i?iklik tarihi ifadeleri",
-    "-": "Son de?i?iklik tarihi bulunamad?"
+    "Bulunamad?": "Son de?i?iklik tarihi bulunamad? veya PDF indirilemedi; workflow bu nedenle ba?ar?s?z say?lmaz"
   }
 }

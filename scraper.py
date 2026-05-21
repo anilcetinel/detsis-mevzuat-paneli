@@ -33,6 +33,7 @@ NEW_RECORDS_LOG_PATH = LOG_DIR / "new_records.log"
 CHANGE_REPORT_PATH = LOG_DIR / "son_degisim_raporu.json"
 USER_AGENT = "Mozilla/5.0 (compatible; DETSIS-Mevzuat-Paneli/1.0)"
 LOG_LOCK = threading.Lock()
+CHANGE_DATE_ERRORS: list[dict[str, str]] = []
 
 
 @dataclass(frozen=True)
@@ -43,7 +44,7 @@ class Regulation:
     resmi_link: str
     kaynak_url: str
     son_degisim_tarihi: str = "-"
-    son_degisim_yontemi: str = "-"
+    son_degisim_yontemi: str = "Bulunamadı"
 
 
 def log(message: str) -> None:
@@ -83,6 +84,18 @@ def append_error(message: str, details: str = "") -> None:
             )
 
 
+def append_change_date_error(record_name: str, url: str, error_type: str, details: str) -> None:
+    with LOG_LOCK:
+        CHANGE_DATE_ERRORS.append(
+            {
+                "mevzuat_adı": record_name,
+                "url": url,
+                "hata": error_type,
+                "detay": details,
+            }
+        )
+
+
 def append_new_records(records: list["Regulation"]) -> None:
     if not records:
         return
@@ -107,14 +120,6 @@ def load_previous_records() -> list[dict[str, str]]:
 def previous_records_are_valid(records: list[dict[str, str]]) -> bool:
     if not records:
         append_error("Mevcut veri geçersiz", "Önceki JSON içinde kayıt yok.")
-        return False
-    missing_categories = [record.get("mevzuat_adı", "") for record in records if not record.get("kategori")]
-    missing_links = [record.get("mevzuat_adı", "") for record in records if not record.get("resmi_link")]
-    if missing_categories or missing_links:
-        append_error(
-            "Mevcut veri bütünlüğü başarısız",
-            f"Kategori boş: {len(missing_categories)} | Link eksik: {len(missing_links)}",
-        )
         return False
     return True
 
@@ -314,11 +319,12 @@ def find_pdf_urls(html: str, base_url: str) -> list[str]:
     return result
 
 
-def extract_pdf_text(pdf_url: str) -> str:
+def extract_pdf_text(pdf_url: str, record_name: str) -> str:
     try:
         from pypdf import PdfReader
     except Exception as exc:
         append_error("PDF okuma bağımlılığı yüklenemedi", str(exc))
+        append_change_date_error(record_name, pdf_url, "PDF bağımlılığı eksik", str(exc))
         return ""
 
     try:
@@ -328,31 +334,35 @@ def extract_pdf_text(pdf_url: str) -> str:
             pages.append(page.extract_text() or "")
         return clean_text(" ".join(pages))
     except Exception as exc:
-        append_error("PDF metni okunamadı", f"{pdf_url} | {exc}")
+        details = f"{pdf_url} | {exc}"
+        append_error("PDF metni okunamadı", details)
+        append_change_date_error(record_name, pdf_url, "PDF indirilemedi veya okunamadı", str(exc))
         return ""
 
 
 def extract_change_date(record: Regulation) -> tuple[str, str]:
     if not record.resmi_link:
-        return "-", "-"
+        append_change_date_error(record.mevzuat_adı, "", "Resmi link yok", "Son değişiklik tarihi kontrolü atlandı.")
+        return "-", "Bulunamadı"
     try:
         html = fetch_text(record.resmi_link)
     except Exception as exc:
         append_error("Resmi DETSİS sayfası okunamadı", f"{record.resmi_link} | {exc}")
-        return "-", "-"
+        append_change_date_error(record.mevzuat_adı, record.resmi_link, "Resmi sayfa okunamadı", str(exc))
+        return "-", "Bulunamadı"
 
     html_date = newest_date_near_labels(strip_html(html), CHANGE_HTML_LABELS)
     if html_date != "-":
         return html_date, "HTML"
 
     for pdf_url in find_pdf_urls(html, record.resmi_link)[:2]:
-        pdf_text = extract_pdf_text(pdf_url)
+        pdf_text = extract_pdf_text(pdf_url, record.mevzuat_adı)
         if not pdf_text:
             continue
         pdf_date = newest_date_near_labels(pdf_text, CHANGE_PDF_LABELS)
         if pdf_date != "-":
             return pdf_date, "PDF"
-    return "-", "-"
+    return "-", "Bulunamadı"
 
 
 def clean_regulation_name(value: str) -> str:
@@ -566,11 +576,11 @@ def validate(records: list[Regulation], previous_records: list[dict[str, str]]) 
 
     missing_categories = [record.mevzuat_adı for record in records if not record.kategori]
     if missing_categories:
-        errors.append(f"Kategori boş kayıt sayısı: {len(missing_categories)}")
+        append_error("Kategori boş kayıt algılandı", f"Kategori boş kayıt sayısı: {len(missing_categories)}")
 
     missing_links = [record.mevzuat_adı for record in records if not record.resmi_link]
     if missing_links:
-        errors.append(f"Link eksik kayıt sayısı: {len(missing_links)}")
+        append_error("Link eksik kayıt algılandı", f"Link eksik kayıt sayısı: {len(missing_links)}")
 
     if errors:
         message = "Mevzuat veri bütünlüğü kontrolü başarısız."
@@ -609,19 +619,25 @@ def enrich_change_dates(records: list[Regulation]) -> list[Regulation]:
 def build_change_report(records: list[Regulation]) -> dict[str, object]:
     html_count = sum(1 for record in records if record.son_degisim_yontemi == "HTML")
     pdf_count = sum(1 for record in records if record.son_degisim_yontemi == "PDF")
+    not_found = sum(1 for record in records if record.son_degisim_yontemi == "Bulunamadı")
     found = html_count + pdf_count
     missing = len(records) - found
+    pdf_errors = [error for error in CHANGE_DATE_ERRORS if "PDF" in error.get("hata", "")]
     return {
         "toplam": len(records),
         "bulunan": found,
         "bulunamayan": missing,
         "html": html_count,
         "pdf": pdf_count,
+        "bulunamadi": not_found,
+        "pdf_indirilemeyen": len(pdf_errors),
+        "hata_sayisi": len(CHANGE_DATE_ERRORS),
+        "hatalar": CHANGE_DATE_ERRORS[-100:],
         "olusturma_tarihi": datetime.now().isoformat(timespec="seconds"),
         "yontemler": {
             "HTML": "DETSİS resmi kayıt sayfasındaki son güncelleme, revizyon veya değişiklik tarihi alanı",
             "PDF": "Resmi kayıt sayfasından bulunan PDF içinde değişiklik tarihi ifadeleri",
-            "-": "Son değişiklik tarihi bulunamadı",
+            "Bulunamadı": "Son değişiklik tarihi bulunamadı veya PDF indirilemedi; workflow bu nedenle başarısız sayılmaz",
         },
     }
 
