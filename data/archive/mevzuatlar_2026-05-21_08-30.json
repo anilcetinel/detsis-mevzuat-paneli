@@ -1,34 +1,12 @@
 {
   "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
   "son_kontrol_tarihi": "2026-05-20T17:17:15",
-  "son_basarili_veri_kontrolu": "2026-05-20T17:17:15",
-  "son_otomatik_deneme": "2026-05-21T08:30:48",
-  "son_otomatik_guncelleme": "2026-05-21T08:30:48",
-  "guncelleme_durumu": "warning",
-  "guncelleme_mesaji": "DETSİS erişilemedi, mevcut veri korundu: TimeoutError: Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://detsis.gov.tr/birim/35955870/35955870/2026-05-20\", waiting until \"domcontentloaded\"\n",
   "toplam": 227,
   "kategori_sayilari": {
     "Kurum Yönetmeliği": 51,
     "Esas ve Usuller": 24,
     "Yönerge": 150,
     "İlke Kararı": 2
-  },
-  "son_degisim_raporu": {
-    "toplam": 227,
-    "bulunan": 0,
-    "bulunamayan": 227,
-    "html": 0,
-    "pdf": 0,
-    "bulunamadi": 0,
-    "pdf_indirilemeyen": 0,
-    "hata_sayisi": 0,
-    "hatalar": [],
-    "olusturma_tarihi": "2026-05-21T08:30:48",
-    "yontemler": {
-      "HTML": "DETSİS resmi kayıt sayfasındaki son güncelleme, revizyon veya değişiklik tarihi alanı",
-      "PDF": "Resmi kayıt sayfasından bulunan PDF içinde değişiklik tarihi ifadeleri",
-      "Bulunamadı": "Son değişiklik tarihi bulunamadı veya PDF indirilemedi; workflow bu nedenle başarısız sayılmaz"
-    }
   },
   "kayitlar": [
     {
@@ -2074,5 +2052,27 @@
       "son_degisim_tarihi": "-",
       "son_degisim_yontemi": "Bulunamad?"
     }
-  ]
+  ],
+  "son_otomatik_guncelleme": "2026-05-21T11:25:13",
+  "son_degisim_raporu": {
+    "toplam": 227,
+    "bulunan": 0,
+    "bulunamayan": 227,
+    "html": 0,
+    "pdf": 0,
+    "bulunamadi": 227,
+    "pdf_indirilemeyen": 0,
+    "hata_sayisi": 0,
+    "hatalar": [],
+    "olusturma_tarihi": "2026-05-20T17:17:15",
+    "yontemler": {
+      "HTML": "DETS?S resmi kay?t sayfas?ndaki son g?ncelleme, revizyon veya de?i?iklik tarihi alan?",
+      "PDF": "Resmi kay?t sayfas?ndan bulunan PDF i?inde de?i?iklik tarihi ifadeleri",
+      "Bulunamad?": "Son de?i?iklik tarihi bulunamad? veya PDF indirilemedi; workflow bu nedenle ba?ar?s?z say?lmaz"
+    }
+  },
+  "son_basarili_veri_kontrolu": "2026-05-20T17:17:15",
+  "son_otomatik_deneme": "2026-05-21T11:25:13",
+  "guncelleme_durumu": "warning",
+  "guncelleme_mesaji": "DETS?S son otomatik denemede eri?ilemedi, mevcut ge?erli veri korundu."
 }
