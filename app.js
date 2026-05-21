@@ -70,6 +70,10 @@ function formatDate(value) {
   }).format(date);
 }
 
+function setText(element, value) {
+  if (element) element.textContent = value;
+}
+
 function countByCategory(records) {
   return records.reduce((acc, record) => {
     acc[record.kategori] = (acc[record.kategori] || 0) + 1;
@@ -127,10 +131,10 @@ function renderSummary() {
   const lastCheck = formatDate(state.data.son_basarili_veri_kontrolu || state.data.son_kontrol_tarihi);
   const lastAttempt = formatDate(state.data.son_otomatik_deneme || state.data.son_otomatik_guncelleme || state.data.son_kontrol_tarihi);
   const isWarning = state.data.guncelleme_durumu === "warning";
-  els.lastChecked.textContent = isWarning ? "Kontrol edildi, veri korunuyor" : "Güncellendi";
-  els.lastDataCheck.textContent = lastCheck;
-  els.lastAutoUpdate.textContent = lastAttempt;
-  els.sourceUrl.textContent = state.data.kaynak_url || "";
+  setText(els.lastChecked, isWarning ? "Kontrol edildi, veri korunuyor" : "Güncellendi");
+  setText(els.lastDataCheck, lastCheck);
+  setText(els.lastAutoUpdate, lastAttempt);
+  setText(els.sourceUrl, state.data.kaynak_url || "");
 
   const cards = document.createDocumentFragment();
   for (const category of categories) {
@@ -144,9 +148,12 @@ function renderSummary() {
   }
   els.categoryCards.replaceChildren(cards);
 
-  els.updateStatusText.textContent = isWarning
-    ? "Son otomatik kontrolde DETSİS erişilemedi; mevcut geçerli veri korunuyor."
-    : "Son otomatik kontrolde DETSİS verisi başarıyla güncellendi.";
+  setText(
+    els.updateStatusText,
+    isWarning
+      ? "Son otomatik kontrolde DETSİS erişilemedi; mevcut geçerli veri korunuyor."
+      : "Son otomatik kontrolde DETSİS verisi başarıyla güncellendi.",
+  );
 
   els.categoryFilter.innerHTML = '<option value="">Tüm kategoriler</option>';
   for (const category of categories) {
