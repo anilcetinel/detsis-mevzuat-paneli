@@ -247,8 +247,7 @@ main {
   font-weight: 900;
 }
 
-.info-box span,
-.change-report {
+.info-box span {
   display: block;
   margin: 3px 0 0;
   color: var(--muted);

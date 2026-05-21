@@ -35,8 +35,8 @@
           <h1>DETSİS Mevzuat Paneli</h1>
           <p class="lead">Sakarya Üniversitesi mevzuat kayıtları tek ekranda aranabilir, filtrelenebilir ve resmi kaynak bağlantılarıyla izlenebilir.</p>
         </div>
-        <div class="status" aria-label="Son otomatik deneme">
-          <span>Son Otomatik Deneme</span>
+        <div class="status" aria-label="Güncelleme durumu">
+          <span>Güncelleme Durumu</span>
           <strong id="lastChecked">-</strong>
         </div>
       </div>
@@ -47,22 +47,21 @@
         <div class="info-icon" aria-hidden="true">i</div>
         <div>
           <strong>Veriler DETSİS kaynak sisteminden otomatik güncellenmektedir.</strong>
-          <span>Eksik kayıt tespit edilirse scraper başarılı sayılmaz ve hata loguna yazılır.</span>
+          <span id="updateStatusText">Güncelleme durumu yükleniyor.</span>
           <dl class="source-facts" aria-label="Kurumsal veri bilgileri">
             <div>
               <dt>Kaynak</dt>
               <dd>DETSİS</dd>
             </div>
             <div>
-              <dt>Son Başarılı Veri Kontrolü</dt>
+              <dt>Son Başarılı Güncelleme</dt>
               <dd id="lastDataCheck">-</dd>
             </div>
             <div>
-              <dt>Son Otomatik Deneme</dt>
+              <dt>Son Kontrol Denemesi</dt>
               <dd id="lastAutoUpdate">-</dd>
             </div>
           </dl>
-          <p id="changeReport" class="change-report">Son değişiklik tarihi raporu yükleniyor.</p>
         </div>
       </section>
 

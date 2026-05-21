@@ -11,7 +11,7 @@ const els = {
   lastChecked: document.querySelector("#lastChecked"),
   lastDataCheck: document.querySelector("#lastDataCheck"),
   lastAutoUpdate: document.querySelector("#lastAutoUpdate"),
-  changeReport: document.querySelector("#changeReport"),
+  updateStatusText: document.querySelector("#updateStatusText"),
   totalCount: document.querySelector("#totalCount"),
   categoryCards: document.querySelector("#categoryCards"),
   latestRecords: document.querySelector("#latestRecords"),
@@ -126,7 +126,8 @@ function renderSummary() {
   animateCount(els.totalCount, state.records.length);
   const lastCheck = formatDate(state.data.son_basarili_veri_kontrolu || state.data.son_kontrol_tarihi);
   const lastAttempt = formatDate(state.data.son_otomatik_deneme || state.data.son_otomatik_guncelleme || state.data.son_kontrol_tarihi);
-  els.lastChecked.textContent = lastAttempt;
+  const isWarning = state.data.guncelleme_durumu === "warning";
+  els.lastChecked.textContent = isWarning ? "Kontrol edildi, veri korunuyor" : "Güncellendi";
   els.lastDataCheck.textContent = lastCheck;
   els.lastAutoUpdate.textContent = lastAttempt;
   els.sourceUrl.textContent = state.data.kaynak_url || "";
@@ -143,15 +144,9 @@ function renderSummary() {
   }
   els.categoryCards.replaceChildren(cards);
 
-  const report = state.data.son_degisim_raporu || {};
-  const found = Number(report.bulunan || 0);
-  const missing = Number(report.bulunamayan || Math.max(state.records.length - found, 0));
-  const html = Number(report.html || 0);
-  const pdf = Number(report.pdf || 0);
-  const statusText = state.data.guncelleme_durumu === "warning"
-    ? `Durum: ${state.data.guncelleme_mesaji || "DETSİS erişilemedi, mevcut veri korundu."}`
-    : `Durum: ${state.data.guncelleme_mesaji || "DETSİS verisi başarıyla güncellendi."}`;
-  els.changeReport.textContent = `${statusText} Son değişiklik tarihi: ${found.toLocaleString("tr-TR")} kayıtta bulundu, ${missing.toLocaleString("tr-TR")} kayıtta bulunamadı. Yöntem: HTML ${html.toLocaleString("tr-TR")}, PDF ${pdf.toLocaleString("tr-TR")}.`;
+  els.updateStatusText.textContent = isWarning
+    ? "Son otomatik kontrolde DETSİS erişilemedi; mevcut geçerli veri korunuyor."
+    : "Son otomatik kontrolde DETSİS verisi başarıyla güncellendi.";
 
   els.categoryFilter.innerHTML = '<option value="">Tüm kategoriler</option>';
   for (const category of categories) {
