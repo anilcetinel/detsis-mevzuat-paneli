@@ -26,3 +26,15 @@ Call log:
 Call log:
   - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""domcontentloaded""
 "
+2026-05-21T07:33:07,Scrape denemesi başarısız (1/2),"Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""domcontentloaded""
+"
+2026-05-21T07:34:13,Scrape denemesi başarısız (2/2),"Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""domcontentloaded""
+"
+2026-05-21T07:34:13,Canlı scrape başarısız; mevcut veri korunuyor,"Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""domcontentloaded""
+"
