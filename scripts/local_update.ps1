@@ -70,10 +70,10 @@ function Invoke-PythonLogged {
 
 function Test-PythonModule {
   param([string]$ModuleName)
-  try {
-    Invoke-Python @("-c", "import $ModuleName")
+  Invoke-Python @("-c", "import $ModuleName") | Out-Null
+  if ($LASTEXITCODE -eq 0) {
     return $true
-  } catch {
+  } else {
     return $false
   }
 }
