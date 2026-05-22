@@ -16,7 +16,7 @@ Kaynak: <https://detsis.gov.tr/birim/35955870/35955870/2026-05-20>
 - Önceki JSON çıktısını `data/archive/mevzuatlar_YYYY-MM-DD_HH-MM.json` olarak yedekler
 - Eksik veri olduğunda hata verir ve `logs/hata_log.csv` dosyasına yazar
 - Arama, kategori filtresi, kayıt sayısı, kategori kartları ve resmi link butonu olan statik panel
-- GitHub Actions ile her gün Türkiye saatiyle 03:00'te otomatik güncelleme
+- Windows Görev Zamanlayıcı ile 6 saatte bir yerel otomatik güncelleme
 
 ## Veri Bütünlüğü Kontrolleri
 
@@ -81,18 +81,38 @@ Ardından <http://localhost:8000> adresini açın.
 1. Projeyi GitHub deposuna gönderin.
 2. Depoda **Settings > Pages** bölümüne gidin.
 3. Source olarak **GitHub Actions** seçin.
-4. `.github/workflows/update-mevzuat.yml` workflow dosyası siteyi otomatik yayınlar.
+4. `.github/workflows/deploy-pages.yml` workflow dosyası siteyi otomatik yayınlar.
 
 ## Otomatik Güncelleme
 
-GitHub Actions workflow her gün `00:00 UTC` saatinde çalışır. Bu saat Türkiye saatiyle `03:00` anlamına gelir.
+DETSİS, GitHub Actions sunucularından gelen isteklerde zaman zaman timeout verebildiği için en sağlam ücretsiz yöntem scraper'ı DETSİS'e erişebilen bu Windows bilgisayarda çalıştırmaktır.
 
-Workflow şunları yapar:
+Yerel otomatik güncelleme şunları yapar:
 
-- Python ve Playwright kurar
-- Scraper'ı çalıştırır
-- `data/mevzuatlar.json` veya ilgili veri/log dosyaları değiştiyse otomatik commit atar
-- Statik siteyi GitHub Pages'e yayınlar
+- Windows Görev Zamanlayıcı scraper'ı 6 saatte bir çalıştırır.
+- Veri DETSİS'e yerel ağdan erişilerek güncellenir.
+- Değişiklik varsa GitHub'a commit/push yapılır.
+- GitHub Pages deploy workflow'u siteyi ücretsiz yayınlar.
+
+Kurulum:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\register_windows_task.ps1
+```
+
+Elle test:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\local_update.ps1
+```
+
+Log dosyası:
+
+```text
+logs/local_scheduler.log
+```
+
+GitHub Actions içindeki `update-mevzuat.yml` manuel çalıştırma için bırakılmıştır. Otomatik 6 saatlik güncelleme yerel Windows göreviyle yapılır.
 
 ## Notlar
 

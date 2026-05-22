@@ -1,8 +1,6 @@
 name: DETSIS mevzuat verisini güncelle
 
 on:
-  schedule:
-    - cron: "0 */6 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -126,27 +124,3 @@ jobs:
           git commit -m "data: DETSIS mevzuat verisini güncelle"
           echo "Commit sonrası push deneniyor."
           git push origin HEAD:main
-
-  deploy:
-    needs: scrape
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Depoyu al
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref_name }}
-
-      - name: Pages yapılandır
-        uses: actions/configure-pages@v5
-
-      - name: Statik siteyi yükle
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "."
-
-      - name: GitHub Pages yayınla
-        id: deployment
-        uses: actions/deploy-pages@v4
