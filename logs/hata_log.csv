@@ -2274,6 +2274,7 @@ Call log:
 Call log:
   - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
 "
+<<<<<<< Updated upstream
 2026-05-22T10:08:50,Resmi DETSİS sayfası okunamadı,"https://kms.kaysis.gov.tr/Home/Goster/187671 | HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.
 The last 30x error message was:
 Found"
@@ -2979,3 +2980,29 @@ Found"
 2026-05-22T10:09:09,Resmi DETSİS sayfası okunamadı,"https://kms.kaysis.gov.tr/Home/Goster/198617 | HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.
 The last 30x error message was:
 Found"
+=======
+2026-05-22T07:03:01,DETSİS mevzuat API başarısız; arayüz fallback deneniyor,<urlopen error timed out>
+2026-05-22T07:05:01,Scrape denemesi başarısız (1/4),"Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
+"
+2026-05-22T07:06:07,DETSİS mevzuat API başarısız; arayüz fallback deneniyor,<urlopen error timed out>
+2026-05-22T07:08:07,Scrape denemesi başarısız (2/4),"Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
+"
+2026-05-22T07:09:13,DETSİS mevzuat API başarısız; arayüz fallback deneniyor,<urlopen error timed out>
+2026-05-22T07:11:14,Scrape denemesi başarısız (3/4),"Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
+"
+2026-05-22T07:12:19,DETSİS mevzuat API başarısız; arayüz fallback deneniyor,<urlopen error timed out>
+2026-05-22T07:14:20,Scrape denemesi başarısız (4/4),"Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
+"
+2026-05-22T07:14:20,Canlı scrape başarısız; mevcut veri korunuyor,"Page.goto: Timeout 120000ms exceeded.
+Call log:
+  - navigating to ""https://detsis.gov.tr/birim/35955870/35955870/2026-05-20"", waiting until ""commit""
+"
+>>>>>>> Stashed changes
