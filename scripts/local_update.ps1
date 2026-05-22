@@ -56,6 +56,18 @@ function Invoke-Python {
   }
 }
 
+function Invoke-PythonLogged {
+  param([string[]]$Arguments)
+  if ($script:PythonCommand -eq "py -3") {
+    & py -3 @Arguments 2>&1 | Tee-Object -FilePath $runLog -Append
+  } else {
+    & $script:PythonCommand @Arguments 2>&1 | Tee-Object -FilePath $runLog -Append
+  }
+  if ($LASTEXITCODE -ne 0) {
+    throw "Python komutu başarısız oldu: $($Arguments -join ' ')"
+  }
+}
+
 function Test-PythonModule {
   param([string]$ModuleName)
   try {
@@ -81,7 +93,9 @@ try {
 
   git pull --rebase --autostash origin main
 
-  Invoke-Python @("scraper.py")
+  $env:DETSIS_FAIL_ON_LIVE_FAILURE = "1"
+  Invoke-PythonLogged @("scraper.py")
+  Remove-Item Env:\DETSIS_FAIL_ON_LIVE_FAILURE -ErrorAction SilentlyContinue
 
   git add -- data/mevzuatlar.json data/mevzuatlar.csv
   if (Test-Path "logs/hata_log.csv") { git add -- logs/hata_log.csv }

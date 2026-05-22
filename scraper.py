@@ -6,6 +6,7 @@ import csv
 import html as html_lib
 import io
 import json
+import os
 import re
 import shutil
 import threading
@@ -836,6 +837,8 @@ async def main() -> None:
         except Exception as scrape_exc:
             append_error("Canlı scrape başarısız; mevcut veri korunuyor", str(scrape_exc))
             if previous_records_are_valid(previous_records) and JSON_PATH.exists() and CSV_PATH.exists():
+                if os.environ.get("DETSIS_FAIL_ON_LIVE_FAILURE") == "1":
+                    raise RuntimeError(f"Canlı DETSİS kontrolü başarısız: {scrape_exc}") from scrape_exc
                 log("UYARI: Canlı scrape başarısız oldu ancak mevcut JSON/CSV geçerli. Public veri dosyası son başarılı kontrol halinde korunacak.")
                 log(f"Korunan kayıt sayısı: {len(previous_records)}")
                 return
