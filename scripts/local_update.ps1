@@ -87,7 +87,6 @@ try {
   if (Test-Path "logs/hata_log.csv") { git add -- logs/hata_log.csv }
   if (Test-Path "logs/new_records.log") { git add -- logs/new_records.log }
   if (Test-Path "logs/son_degisim_raporu.json") { git add -- logs/son_degisim_raporu.json }
-  if (Test-Path "logs/local_scheduler.log") { git add -- logs/local_scheduler.log }
   $archives = Get-ChildItem -Path "data/archive" -Filter "*.json" -ErrorAction SilentlyContinue
   if ($archives) { git add -- data/archive/*.json }
 
