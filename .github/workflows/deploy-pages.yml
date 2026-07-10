@@ -20,26 +20,64 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry_1.outputs.page_url || steps.deployment_retry_2.outputs.page_url }}
     steps:
       - name: Depoyu al
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Pages yapılandır
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Statik siteyi yükle
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: "."
 
       - name: GitHub Pages yayınla
         id: deployment
-        uses: actions/deploy-pages@v4
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+
+      - name: İlk yeniden deneme öncesi bekle
+        if: steps.deployment.outcome == 'failure'
+        run: |
+          echo "::warning::İlk GitHub Pages yayın denemesi başarısız oldu. 30 saniye sonra yeniden denenecek."
+          sleep 30
+
+      - name: GitHub Pages yayınını yeniden dene
+        id: deployment_retry_1
+        if: steps.deployment.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+
+      - name: İkinci yeniden deneme öncesi bekle
+        if: steps.deployment_retry_1.outcome == 'failure'
+        run: |
+          echo "::warning::İkinci GitHub Pages yayın denemesi başarısız oldu. 60 saniye sonra son kez denenecek."
+          sleep 60
+
+      - name: GitHub Pages yayınını son kez dene
+        id: deployment_retry_2
+        if: steps.deployment_retry_1.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+
+      - name: Yayın sonucunu doğrula
+        if: always()
+        run: |
+          if [[ "${{ steps.deployment.outcome }}" == "success" || \
+                "${{ steps.deployment_retry_1.outcome }}" == "success" || \
+                "${{ steps.deployment_retry_2.outcome }}" == "success" ]]; then
+            echo "GitHub Pages yayını başarıyla tamamlandı."
+            exit 0
+          fi
+
+          echo "::error::GitHub Pages yayını üç denemede de tamamlanamadı. GitHub Pages hizmet durumunu ve id-token yetkisini kontrol edin."
+          exit 1
