@@ -1,0 +1,36 @@
+name: GitHub Pages yayın kurtarma
+
+on:
+  workflow_run:
+    workflows:
+      - "GitHub Pages yayını"
+    types:
+      - completed
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  retry:
+    if: >-
+      github.event.workflow_run.conclusion == 'failure' &&
+      github.event.workflow_run.run_attempt < 3
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Pages hizmetinin toparlanmasını bekle
+        run: |
+          echo "Yayın başarısız oldu. 5 dakika sonra workflow yeniden çalıştırılacak."
+          sleep 300
+
+      - name: Başarısız işi yeniden çalıştır
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          CURRENT_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+        run: |
+          echo "Workflow çalışması ${RUN_ID}; mevcut deneme ${CURRENT_ATTEMPT}. Başarısız işler yeniden başlatılıyor."
+          gh api \
+            --method POST \
+            "/repos/${REPOSITORY}/actions/runs/${RUN_ID}/rerun-failed-jobs"
