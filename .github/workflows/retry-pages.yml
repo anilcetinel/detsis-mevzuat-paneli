@@ -1,9 +1,9 @@
-name: GitHub Pages yayın kurtarma
+name: GitHub Pages deploy recovery
 
 on:
   workflow_run:
     workflows:
-      - "GitHub Pages yayını"
+      - "GitHub Pages deploy"
     types:
       - completed
 
@@ -15,22 +15,18 @@ jobs:
   retry:
     if: >-
       github.event.workflow_run.conclusion == 'failure' &&
-      github.event.workflow_run.run_attempt < 3
+      github.event.workflow_run.event == 'push'
     runs-on: ubuntu-latest
     steps:
-      - name: GitHub Pages hizmetinin toparlanmasını bekle
+      - name: Wait for GitHub Pages to release the deployment
         run: |
-          echo "Yayın başarısız oldu. 5 dakika sonra workflow yeniden çalıştırılacak."
+          echo "Deployment failed. Waiting 5 minutes before a clean retry."
           sleep 300
 
-      - name: Başarısız işi yeniden çalıştır
+      - name: Start a clean Pages workflow run
         env:
           GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
-          RUN_ID: ${{ github.event.workflow_run.id }}
-          CURRENT_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
         run: |
-          echo "Workflow çalışması ${RUN_ID}; mevcut deneme ${CURRENT_ATTEMPT}. Başarısız işler yeniden başlatılıyor."
-          gh api \
-            --method POST \
-            "/repos/${REPOSITORY}/actions/runs/${RUN_ID}/rerun-failed-jobs"
+          echo "Starting a new run so it contains exactly one github-pages artifact."
+          gh workflow run deploy-pages.yml --repo "${REPOSITORY}" --ref main
