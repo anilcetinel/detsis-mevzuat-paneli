@@ -1,0 +1,2806 @@
+{
+  "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+  "son_kontrol_tarihi": "2026-09-04T15:56:49",
+  "son_basarili_veri_kontrolu": "2026-09-04T15:56:49",
+  "son_otomatik_deneme": "2026-09-04T15:56:49",
+  "son_otomatik_guncelleme": "2026-09-04T15:56:49",
+  "guncelleme_durumu": "checked",
+  "guncelleme_mesaji": "DETSİS başarıyla kontrol edildi, değişiklik yok.",
+  "toplam": 241,
+  "kategori_sayilari": {
+    "Kurum Yönetmeliği": 51,
+    "Yönerge": 153,
+    "Esas ve Usuller": 27,
+    "Uygulama / Program Esasları": 8,
+    "İlke Kararı": 2
+  },
+  "son_degisim_raporu": {
+    "toplam": 241,
+    "bulunan": 0,
+    "bulunamayan": 241,
+    "html": 0,
+    "pdf": 0,
+    "bulunamadi": 241,
+    "pdf_indirilemeyen": 0,
+    "hata_sayisi": 241,
+    "hatalar": [
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAM AÇMA/KAPATMA, MÜFREDAT OLUŞTURMA VE GÜNCELLEME YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/202854",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAMLARDA DANIŞMANLIK YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/202853",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAMLARDA İŞ DENEYİMLİ ÖĞRENCİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203361",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAMLARDA MEZUNİYET ŞARTI YAYIN YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203363",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAMLARDA ULUSLARARASI ÖĞRENCİ KABULÜ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203364",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MESLEK YÜKSEKOKULLARI İŞLETMEDE MESLEKİ EĞİTİM YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/183672",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MESLEK YÜKSEKOKULLARI İŞYERİ UYGULAMASI EĞİTİM YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/65452",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MESLEK YÜKSEKOKULLARI ZORUNLU İŞYERİ STAJI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/65464",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MESLEKİ UYGULAMALAR DERSİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/82567",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MEZUN İLİŞKİLERİ KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/200124",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MEZUNİYET TÖRENİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/64480",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MİKRO YETERLİLİK YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/211335",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ BİLİMSEL ARAŞTIRMA VE AR-GE PROJELERİ KOORDİNASYON KURULU UYGULAMA USUL VE ESASLARI HAKKINDA YÖNERGE",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/146992",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MUAFİYET VE İNTİBAK YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/163154",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ BİTİRME PROJELERİ YARIŞMASI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/187250",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ HİBE AR-GE TEST TAŞITLARININ KULLANIMINA İLİŞKİN ESAS VE USULLER HAKKINDA YÖNERGE",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/147007",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ ÖĞRENCİLERİ İÇİN ONLİNE İŞ SAĞLIĞI EĞİTİM VE SINAV UYGULAMASINA İLİŞKİN ESAS VE USULLER HAKKINDA YÖNERGE",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/149118",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ UYGULAMALI MÜHENDİSLİK DENEYİMİ EĞİTİMİ (UMDE) YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/157794",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ ZORUNLU STAJ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/163153",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ NOT DURUM BELGESİ (TRANSKRİPT) YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/193628",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRENCİ KONSEYİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/64446",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRENCİ ARGE UYUM YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/157792",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRENCİ SENATOSU YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/150688",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRENCİ VE PERSONEL GEZİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/191643",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRETİM GELİŞTİRME DEKANLIĞI TEŞKİLAT, GÖREV VE ÇALIŞMA USULLERİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203212",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRETİM ÜYELERİNİN BİREYSEL EĞİTİM BAŞARILARININ ÖDÜLLENDİRİLME YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/73978",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRETİM ÜYELİĞİNE YÜKSELTİLME VE ATANMA ÖLÇÜTLERİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/200018",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖLÇME VE DEĞERLENDİRME YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/188072",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖN MALİ KONTROL İŞLEMLERİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/207351",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖN LİSANS VE LİSANS DÜZEYİNDEKİ PROGRAMLAR ARASINDA ÇİFT ANADAL (ÇAP) VE LİSANS DÜZEYİNDE YANDAL PROGRAMI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/73977",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖZEL ÖĞRENCİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/159851",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ PEDAGOJİK FORMASYON EĞİTİMİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/69583",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ REHBERLİK VE PSİKOLOJİK DANIŞMANLIK BİRİMİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/137839",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ REKTÖRLÜĞÜ PERSONEL SERVİS HİZMETLERİNİN YÜRÜTÜLMESİNE DAİR YÖNERGE 18.03.2021-578-02",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/174361",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ BİLİMSEL ARAŞTIRMALARI ETİK KURULU YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203073",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ EBELİK BÖLÜMÜ YAZ STAJ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/144137",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ EBELİK VE HEMŞİRELİK BÖLÜMÜ TELAFİ UYGULAMALARI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/172827",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ HEMŞİRELİK BÖLÜMÜ AKADEMİK DANIŞMANLIK VE KARİYER DANIŞMALIĞI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/199450",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ HEMŞİRELİK BÖLÜMÜ YAZ STAJI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/207697",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ HEMŞİRELİK/EBELİK BÖLÜMÜ 8. YARIYIL STAJ İNTÖRN YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/75218",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ İŞLETMEDE MESLEKİ EĞİTİM DERSİ UYGULAMA YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/182879",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ KURUL VE KOMİSYONLARIN KURULUŞ VE ÇALIŞMA ESASLARI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/198483",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK HİZMETLERİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ EK ÖDEME YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/184074",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK KÜLTÜR VE SPOR DAİRE BAŞKANLIĞI İKTİSADİ İŞLETMESİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/151182",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK YÜKSEKOKULU HEMŞİRELİK- EBELİK BÖLÜMÜ 8. YARIYIL UYGULAMA (İNTÖRNLÜK) YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/64507",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM MİMARLIK FAKÜLTESİ GÖRSEL İLETİŞİM TASARIMI BÖLÜMÜ BİTİRME PROJESİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/209104",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ BÖLÜM STAJ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/106395",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ GÖRSEL İLETİŞİM TASARIMI BÖLÜMÜ STAJ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/209098",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ MİMARLIK BÖLÜMÜ MİMARİ TASARIM DERSLERİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/183578",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ ZORUNLU STAJ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/170515",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT, TASARIM VE MİMARLIK FAKÜLTESİ ÖZEL YETENEK SINAVI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/105354",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SEÇMELİ DERSLER YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/170516",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SEKTÖR DERSLERİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/150683",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SERBEST DOLAŞIM (FREE MOVER) YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/137997",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SIFIR ATIK YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/183549",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SINAV YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/163155",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SİYASAL BİLGİLER FAKÜLTESİ ÇALIŞMA EKONOMİSİ VE ENDÜSTRİ İLİŞKİLERİ BÖLÜMÜ MESLEKİ UYGULAMA YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/200164",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SİYASAL BİLGİLER FAKÜLTESİ İSLAM İKTİSADI VE FİNANS BÖLÜMÜ MESLEKİ UYGULAMA YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203074",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SOSYAL TRASKRİPT YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/147114",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SPOR, KÜLTÜR VE SANAT BİRLİĞİ BİRİM YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/95291",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SUCUL OMURGALI CANLI DENEYLERİ YEREL ETİK KURUL YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203188",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SÜREKLİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ TARAFINDAN DÜZENLENECEK YABANCI DİL KURSLARININ TANINMASI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/147491",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TEKNOLOJİ VE İNOVASYON YARIŞMALARI KOORDİNATÖRLÜĞÜ (TEKNOVA) YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/200384",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ İNTÖRNLÜK DÖNEMİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/64497",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ MEZUNİYET SONRASI EĞİTİMİ KOMİSYONU YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/160036",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ MEZUNİYET ÖNCESİ EĞİTİM - ÖĞRETİM VE SINAV YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/151461",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ TIP EĞİTİMİ KURUL VE KOMİSYONLARI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/168714",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TİCARİ REKLAM, İLAN, AFİŞ, STANT VE TANITIM ARAÇLARI UYGULAMA YÖNERGESİ 06.03.2017",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/103978",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TOPLUMSAL KATKI VE SÜRDÜRÜLEBİLİRLİK KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/200123",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TURİZM FAKÜLTESİ STAJ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/128871",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TÜRK DİLİ ÖĞRETİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ EĞİTİM-ÖĞRETİM VE SINAV YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/156144",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TÜRK DİLİ ÖĞRETİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ İŞ VE GÖREV TANIMI, ÜCRETLENDİRME VE EK ÖDEMELERE İLİŞKİN YÖNERGE",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/74730",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ULUSLARARASI ÖĞRENCİ SINAVI (SAKARYA YÖS) SINAV YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/159150",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ULUSLARARASI EŞ DİPLOMALI DOKTORA EĞİTİM VE ÖĞRETİM YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/209004",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ UZAKTAN EĞİTİM ARAŞTIRMA VE UYGULAMA MERKEZİ MÜDÜRLÜĞÜ İŞ VE GÖREV TANIMI, ÜCRETLENDİRME VE EK ÖDEMELERE İLİŞKİN YÖNERGE",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/149327",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİL HAZIRLIK SINIFLARI EĞİTİM-ÖĞRETİM SINAV YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/155759",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİLLER YÜKSEKOKULU İNGİLİZCE HAZIRLIK PROGRAMI EĞİTİM-ÖĞRETİM VE SINAV YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203217",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİLDE YÜRÜTÜLEN PROGRAMLARIN UYGULAMA YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/193629",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI UYRUKLU ÖĞRETİM ELEMANI İSTİHDAM VE DEĞERLENDİRME KOORDİNATÖRLÜĞÜ İLE ULUSLARARASI DANIŞMA KURULU YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/207352",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YANGIN ÖNLEME VE SÖNDÜRME YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/82356",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YAYIN YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/64448",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YATAY GEÇİŞ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/159466",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YAYINLARI VE SAKARYA ÜNİVERSİTESİ KÜLTÜR YAYINLARI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/180069",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YERLEŞKELERİ MOTORLU TAŞIT TRAFİĞİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/193545",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YAZ ÖĞRETİMİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/157423",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YEMEK BURSU YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/163331",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YETKİ DEVRİ VE İMZA YETKİLERİ YÖNERGESİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/62119",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÜRETKEN YAPAY ZEKA KULLANIM İLKELERİ REHBERİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/207704",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YURT DIŞINA LİSANSÜSTÜ ÖĞRENİM AMACIYLA GÖNDERİLECEK ÖĞRENCİLERİ SEÇME VE YERLEŞTİRME BURS PROGRAMI KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/179505",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SÜREKLİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ İŞ TANIMI, ÜCRETLENDİRME VE KATKI PAYLARINA -EK ÖDEMELERE- İLİŞKİN İLKELER",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/74732",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DİŞ HEKİMLİĞİ FAKÜLTESİ İSTİSNAİ HİZMET UYGULAMA ESASLARI",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/207480",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ ARAPÇA HAZIRLIK SINIFI KUR SİSTEMİ UYGULAMA ESASLARI",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/155969",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANS PEDAGOJİK FORMASYON EĞİTİMİNE İLİŞKİN UYGULAMA ESASLARI",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203367",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ DANIŞMA KURULU UYGULAMA ESASLARI",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/103977",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖN LİSANS VE LİSANS EĞİTİM ÖĞRETİM VE SINAV YÖNETMELİĞİ UYGULAMA ESASLARI",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/68082",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YÜZ YÜZE EĞİTİMİN UZAKTAN EĞİTİM İLE DESTEKLENMESİ UYGULAMA ESASLARI",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/160104",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖN LİSANS VE LİSANS PROGRAMLARI BÜTÜNLEME SINAVI UYGULAMA ESASLARI",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/199469",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİLLER YÜKSEKOKULU ÜNİVERSİTE İSTEĞE BAĞLI İNGİLİZCE DERSLERİ EĞİTİM-ÖĞRETİM VE UYGULAMA ESASLARI",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/198617",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KAYIT VE DOSYALAMA YÖNERGESİNİN YÜRÜRLÜKTEN KALDIRILMASINA DAİR YÖNERGE",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/62134",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "<urlopen error timed out>"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KİMLİK KARTI VE SAÜ KART GEÇİŞ SİSTEMİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/154287",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "<urlopen error timed out>"
+      }
+    ],
+    "olusturma_tarihi": "2026-09-04T15:56:49",
+    "yontemler": {
+      "HTML": "DETSİS resmi kayıt sayfasındaki son güncelleme, revizyon veya değişiklik tarihi alanı",
+      "PDF": "Resmi kayıt sayfasından bulunan PDF içinde değişiklik tarihi ifadeleri",
+      "Bulunamadı": "Son değişiklik tarihi bulunamadı veya PDF indirilemedi; workflow bu nedenle başarısız sayılmaz"
+    }
+  },
+  "kayitlar": [
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ AFET YÖNETİM UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "28/04/2015",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/44467",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ANAYASA ÇALIŞMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "28/09/2016",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/75857",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ARAŞTIRMA-GELİŞTİRME UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "13/03/2014",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/43265",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ARŞİV HİZMETLERİ YÖNETMELİĞİNİN YÜRÜRLÜKTEN KALDIRILMASINA DAİR YÖNETMELİK",
+      "tarih": "13/04/2022",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/187671",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ATATÜRK İLKELERİ VE İNKILAPTARİHİ ARAŞTIRMA VE UYGULAMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "25/02/2001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35814",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ AVRUPA BİRLİĞİ ARAŞTIRMAVE DOKÜMANTASYON MERKEZİ YÖNETMELİĞİ",
+      "tarih": "15/06/1997",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35813",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BAĞIMLILIKLA MÜCADELE UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "15/08/2020",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/166975",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BALKAN ARAŞTIRMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "16/09/2008",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/38618",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİLGİSAYAR ARAŞTIRMA VE UYGULAMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "28/02/2005",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/36425",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİYOMEDİKAL, MANYETİK VE YARIİLETKEN MALZEMELER UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "24/11/2014",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/43990",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DİASPORA ÇALIŞMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "15/11/2015",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/62505",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DİŞ HEKİMLİĞİ UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "07/01/2019",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/148799",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DÖNER SERMAYE İŞLETMESİ YÖNETMELİĞİ",
+      "tarih": "11/04/2021",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/175773",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ EĞİTİM FAKÜLTESİİLKÖĞRETİM SINIF ÖĞRETMENLİĞİ SERTİFİKA PROGRAMI YÖNETMELİĞİ",
+      "tarih": "11/02/1999",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35815",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ELEKTROMANYETİK UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "02/03/2015",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/44315",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ GELENEKSEL VE TAMAMLAYICI TIP UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "17/02/2015",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/44288",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ GENÇLİK ÇALIŞMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "26/04/2021",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/176966",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ HUKUK KLİNİKLERİ UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "29/04/2019",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/151105",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İSLAM EKONOMİSİ VE FİNANSI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "21/07/2014",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/43681",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KADIN ARAŞTIRMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "27/08/2009",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/39220",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KAFKAS ARAŞTIRMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "26/09/2013",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/42756",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KAYNAK TEKNOLOJİSİ ARAŞTIRMA, MUAYENE VE UYGULAMA MERKEZİ (KATAMER) YÖNETMELİĞİ",
+      "tarih": "11/11/1997",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35816",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KÜLTÜREL ÇALIŞMALAR UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/71970",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KÜLTÜREL ÇALIŞMALAR UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ 03/07/2016",
+      "tarih": "03/07/2016",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/74940",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KÜTÜPHANE YÖNETMELİĞİNİN YÜRÜRLÜKTEN KALDIRILMASINA DAİR YÖNETMELİK",
+      "tarih": "20/09/2021",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/180849",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ EĞİTİM VE ÖĞRETİM YÖNETMELİĞİ",
+      "tarih": "01/12/2024",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/204338",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MUHASEBE VE FİNANS UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "07/12/2019",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/157338",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ORGAN VE DOKU NAKLİ UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "21/07/2014",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/43682",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ORTADOĞU UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİNİN YÜRÜRLÜKTEN KALDIRILMASINA DAİR YÖNETMELİK",
+      "tarih": "07/12/2018",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/147263",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ OSMANLI ARAŞTIRMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "21/04/2015",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/44455",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRETİM ELEMANLARININ TEKNOLOJİ GELİŞTİRME BÖLGELERİNDE GÖREVLENDİRİLME VE ŞİRKET KURABİLMELERİNE DAİR YÖNETMELİK",
+      "tarih": "25/01/2010",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/39471",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRETİM ÜYELERİNİN AKADEMİKKIYAFETLERİ HAKKINDAKİ YÖNETMELİK",
+      "tarih": "04/01/1996",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35818",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖN LİSANS VE LİSANS EĞİTİM-ÖĞRETİM VE SINAV YÖNETMELİĞİ",
+      "tarih": "10/06/2019",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/151552",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK HİZMETLERİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "19/12/2005",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/37112",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAKARYA EKONOMİK VE SOSYAL ARAŞTIRMALAR MERKEZİ YÖNETMELİĞİ",
+      "tarih": "26/03/1997",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35819",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SPOR, KÜLTÜR VE SANAT BİRLİĞİ BİRİM YÖNETMELİĞİ",
+      "tarih": "08/01/1994",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35820",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SÜREKLİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "04/01/2013",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/41930",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ EĞİTİM-ÖĞRETİM VE SINAV YÖNETMELİĞİNİN YÜRÜRLÜKTEN KALDIRILMASINA DAİR YÖNETMELİK",
+      "tarih": "20/09/2017",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/134435",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TÜRK DİLİ ÖĞRETİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "05/12/2010",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/39977",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TÜRK DÜNYASI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "04/12/2017",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/137793",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TÜRK-ERMENİ İLİŞKİLERİ ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "27/10/2001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35821",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TÜRKİYAT ARAŞTIRMALARI VE UYGULAMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "28/06/2006",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/37532",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ UZAKTAN EĞİTİM ARAŞTIRMA VE UYGULAMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "06/06/2005",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/36557",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİLLER EĞİTİM-ÖĞRETİM ARAŞTIRMA VE UYGULAMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "02/01/1997",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35825",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YANGIN UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "07/07/2015",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/57173",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YAPAY ZEKA SİSTEMLERİ UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "19/03/2010",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/39553",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YAZ ÖĞRETİMİ YÖNETMELİĞİNİN YÜRÜRLÜKTEN KALDIRILMASINA DAİR YÖNETMELİK",
+      "tarih": "10/12/2015",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/68164",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YURTLAR YÖNETMELİĞİ",
+      "tarih": "29/07/2001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35831",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YÜKSEKÖĞRETİM ÇALIŞMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ",
+      "tarih": "03/07/2016",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/72230",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YÜKSEKÖĞRETİM ÇALIŞMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ YÖNETMELİĞİ 03/07/2016",
+      "tarih": "03/07/2016",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/74941",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Kurum Yönetmeliği",
+      "mevzuat_adı": "SAYMER SAKARYA ÜNİVERSİTESİ SAKARYA YENİLİK MERKEZİ YÖNETMELİĞİ",
+      "tarih": "02/01/1997",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/35832",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ 2018-2019 YAZ ÖĞRETİMİ SENATO ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/147124",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ 7592 SAYILI KANUN İLE 2547 SAYILI KANUNA EKLENEN GEÇİCİ MADDE 85 KAPSAMINDA LİSANS VE ÖNLİSANS PROGRAMLARINDA UYGULANACAK USUL VE ESASLAR",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/211401",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ 7592/14 SAYILI KANUN İLE KABUL EDİLEN ÖĞRENCİ AFFINDA LİSANSÜSTÜ EĞİTİM-ÖĞRETİM İNTİBAK SÜRECİNDE UYGULANACAK USUL VE ESASLAR",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/212409",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİREYSEL ÖNERİ SİSTEMİ ESAS VE USULLERİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/141283",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BÜTÜNLEŞİK YÜKSEK LİSANS PROGRAMI SENATO ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/198928",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DİŞ HEKİMLİĞİ FAKÜLTESİ MESAİ SAATLERİ DIŞINDA ÖĞRETİM ÜYELERİ TARAFINDAN BİZZAT VERİLEN SAĞLIK HİZMETLERİNİN ÜCRETLENDİRİLMESİ VE UYGULANACAK USUL VE ESASLAR",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/208710",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DİŞ HEKİMLİĞİ FAKÜLTESİNİN DÖNER SERMAYE GELİRLERİNDEN YAPILACAK EK ÖDEMENİN DAĞITILMASINDA UYGULANACAK USUL VE ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/207481",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DOKTORA SENATO ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203360",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DÖNER SERMAYE İŞLETMESİ AR-GE, TASARIM VE YENİLİK PROJE VE FAALİYETLERİ UYGULAMA USUL VE ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/200383",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ETİK KURULU KURULUŞ VE İŞLEYİŞ ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/64456",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KALİTE KOMİSYONU İLE KURUMSAL ANALİZ VE KALİTE GELİŞTİRME KOORDİNATÖRLÜĞÜ ÇALIŞMA USUL VE ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/170512",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KAMU İÇ KONTROL STANDARTLARINA UYUM EYLEM PLANLARINA İLİŞKİN USUL VE ESASLAR",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/208407",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KONUT TAHSİS VE YÖNETİMİNE İLİŞKİN SENATO ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/64491",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAMLARA İLİŞKİN GENEL ESASLAR",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203362",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ORHUN DEĞİŞİM PROGRAMI USUL VE ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/208172",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRENCİ TOPLULUKLARI ÖDÜL ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/177040",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖNCEKİ ÖĞRENMELERİN TANINMASI SENATO ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/150586",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ PERSONEL ÇALIŞMA SAAT VE SÜRELERİNE İLİŞKİN USUL VE ESASLAR",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/196259",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ RİSK YÖNETİMİ USUL VE ESASLAR",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/210314",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ŞİDDET OLAYLARI VE İNSANİ KRİZ NEDENİYLE EK MADDE-2 UYARINCA YAPILACAK YATAY GEÇİŞ ESASLARINA İLİŞKİN USUL VE ESASLAR",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/75767",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TEZLİ YÜKSEK LİSANS SENATO ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203365",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TEZSİZ YÜKSEK LİSANS SENATO ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203366",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ PORTFOLYO DANIŞMANLIĞI UYGULAMA USUL VE ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/168715",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ PROBLEME DAYALI ÖĞRENİM USUL VE ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/193631",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ SINAV UYGULAMA USUL VE ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/206836",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YATAY GEÇİŞ SENATO ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/71968",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Esas ve Usuller",
+      "mevzuat_adı": "T.C. SAKARYA ÜNİVERSİTESİ ÖĞRETİM ÜYELERİNİN ÖZEL HASTANELER VE VAKIF YÜKSEKÖĞRETİM KURUMLARI HASTANELERİNDE ÇALIŞTIRILMALARINA İLİŞKİN USUL VE ESASLAR",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/193544",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "İLAHİYAT FAKÜLTESİ YAYGIN DİN EĞİTİMİ VE DİN HİZMETLERİ MESLEKİ UYGULAMA YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/154284",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ AÇIK BİLİM VE AÇIK AKADEMİK ARŞİV YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/157422",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ADAY ÖĞRENCİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/150587",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ARAŞTIRMA DEKANLIĞI ARAŞTIRMA VE GELİŞTİRME STRATEJİSİ ÜST KURULU İLE ARAŞTIRMA VE GELİŞTİRME KOORDİNASYON KURULU TEŞKİLAT, GÖREV VE ÇALIŞMA USULLERİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/196399",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ AZAMİ SÜRE YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/170514",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİLGİSAYAR ARAŞTIRMA VE UYGULAMA MERKEZİ İŞ VE GÖREV TANIMI, ÜCRETLENDİRME VE EK ÖDEMELERE İLİŞKİN YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/155989",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİLGİSAYAR VE BİLİŞİM BİLİMLERİ FAKÜLTESİ UYGULAMALI MÜHENDİSLİK DENEYİMİ EĞİTİMİ (UMDE) YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/191172",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİLGİSAYAR VE BİLİŞİM BİLİMLERİ FAKÜLTESİ ZORUNLU İŞYERİ STAJI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/74250",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİLİM ÖDÜLLERİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/204240",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİLİMSEL ARAŞTIRMA PROJELERİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/104524",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİLİMSEL DERGİLER KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/196258",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİLİMSEL YAYINLAR KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/173205",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİLİŞİM SİSTEMLERİ VE TEKNOLOJİLERİ KOORDİNASYON KURULU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/201014",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ BİTİRME PROJELERİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/199653",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DANIŞMA KURULU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/182906",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DANIŞMANLIK YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/157289",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DENEME DERSİ UYGULAMA YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/207705",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DIŞ İLİŞKİLER KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/95292",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DİPLOMA, MEZUNİYET BELGESİ İLE DİĞER BELGELERİN DÜZENLENMESİNDE UYULACAK ESASLARA İLİŞKİN YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/71967",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DİŞ HEKİMLİĞİ FAKÜLTESİ EĞİTİM-ÖĞRETİM VE SINAV YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/155741",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DOKTORA SONRASI SÖZLEŞMELİ ARAŞTIRMACI VE KISMİ ZAMANLI NİTELİKLİ ARAŞTIRMACI PROGRAMI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/208793",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DUMANSIZ HAVA SAHASI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203866",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ EĞİTİM ARAŞTIRMALARI VE YAYIN ETİK KURULU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/179898",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ EĞİTİM FAKÜLTESİ PEDAGOJİK FORMASYON İŞ TANIMI, ÜCRETLENDİRME VE EK ÖDEMELERE İLİŞKİN ESASLAR HAKKINDA YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/135830",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ EĞİTİM FAKÜLTESİ TOPLUMA HİZMET UYGULAMALARI DERSİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/143101",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ EĞİTİM FAKÜLTESİ YABANCI DİLLER EĞİTİMİ BÖLÜMÜ ZORUNLU YABANCI DİL EĞİTİM- ÖĞRETİM VE SINAV YÖNERGESİ.PDF",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/95896",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ EĞİTİM-ÖĞRETİM GÜNCELLEME VE DEĞERLENDİRME KURULU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/191633",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ENGELSİZ YAŞAM VE DESTEK KOORDİNATÖRLÜĞÜ VE UYARLAMA HİZMETLERİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/199506",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ENSTİTÜLER KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/200130",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ENSTİTÜLERİ LİSANSÜSTÜ TEZ ÇALIŞMASI BENZERLİK YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/198764",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ERASMUS+ KA 131 & KA171 PROGRAMI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/159389",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ERASMUS+ KOORDİNATÖRLÜĞÜ YABANCI DİL YETERLİLİĞİNİN BELİRLENMESİNE İLİŞKİN YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/205105",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ FEN FAKÜLTESİ İŞLETMEDE FEN BİLİMLERİ DENEYİMİ EĞİTİMİ (İFDE) YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203075",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ FİKRÎ VE SINAÎ MÜLKİYET HAKLARI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/151372",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ GÖNÜLLÜ DOĞAL AFET ARAMA KURTARMA BİRİMİNİN KURULUŞU, GÖREVLERİ, ÇALIŞMA USUL VE ESASLARINA DAİR YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/151180",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ GÜVENLİK SORUŞTURMASI VE ARŞİV ARAŞTIRMASI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/147417",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ HATA, USULSÜZLÜK VE YOLSUZLUKLARIN BİLDİRİLMESİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/62129",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ HAYVAN DENEYLERİ YEREL ETİK KURULU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/128868",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ HAZIRLIK SINIFLARI EĞİTİM ÖĞRETİM VE SINAV YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/64509",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ KALİTE VE AKREDİTASYON KURULU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/167281",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ MİSAFİR ÖĞRENCİ KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/187868",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ PUKÖ (PLANLA, UYGULA, KONTREL ET VE ÖNLEM AL ) ESASLI EĞİTİM VE ÖĞRETİM SÜRECİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/163201",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İLETİŞİM FAKÜLTESİ MESLEKİ UYGULAMA DERSİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/148793",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İNSAN KAYNAKLARI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/157791",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İŞ SAĞLIĞI VE GÜVENLİĞİ İÇ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/72722",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İŞ SAĞLIĞI VE İŞ GÜVENLİĞİ KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/159467",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İŞ YERİ DİSİPLİN YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/149253",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İŞLETME FAKÜLTESİ İŞLETMEDE MESLEKİ EĞİTİM DERSİ UYGULAMA YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/151010",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İŞLETME FAKÜLTESİ LİSANS MÜFREDAT KOMİSYONU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/137841",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İŞLETME FAKÜLTESİ LİSANS ÖĞRENME GÜVENCESİ KOMİSYONU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/137912",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İŞLETME FAKÜLTESİ ÖĞRETİM ÜYELİĞİ KADROLARINA YÜKSELTİLME VE ATANMA İNCELEME KURULU ÇALIŞMA ESASLARI HAKKINDA YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/137840",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KALİTE GÜVENCE SİSTEMİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/196152",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KAPALI MEKÂNLAR KULLANIM YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/157428",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KARİYER GELİŞTİRME KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/200125",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KAYIT DONDURMA YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/157424",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KAYIT VE DOSYALAMA YÖNERGESİNİN YÜRÜRLÜKTEN KALDIRILMASINA DAİR YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/62134",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KİMLİK KARTI VE SAÜ KART GEÇİŞ SİSTEMİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/154287",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KİŞİSEL VERİLERİ KORUMA KURULU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/160037",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KONGRE VE KÜLTÜR MERKEZİ SALONLARI KULLANIM YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/149254",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KONUT TAHSİS YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/147420",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KURUMSAL BELGE YÖNETİMİ KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203867",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KURUMSAL İLETİŞİM KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/206835",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KURUMSAL RİSK YÖNETİMİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/64430",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KÜTÜPHANE YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/180744",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANS PROGRAMLARINDA İLGİ ALANI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/156145",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAM AÇMA/KAPATMA, MÜFREDAT OLUŞTURMA VE GÜNCELLEME YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/202854",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAMLARDA DANIŞMANLIK YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/202853",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAMLARDA İŞ DENEYİMLİ ÖĞRENCİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203361",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAMLARDA MEZUNİYET ŞARTI YAYIN YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203363",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAMLARDA ULUSLARARASI ÖĞRENCİ KABULÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203364",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MESLEK YÜKSEKOKULLARI İŞLETMEDE MESLEKİ EĞİTİM YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/183672",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MESLEK YÜKSEKOKULLARI İŞYERİ UYGULAMASI EĞİTİM YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/65452",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MESLEK YÜKSEKOKULLARI ZORUNLU İŞYERİ STAJI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/65464",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MESLEKİ UYGULAMALAR DERSİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/82567",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MEZUN İLİŞKİLERİ KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/200124",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MEZUNİYET TÖRENİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/64480",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MİKRO YETERLİLİK YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/211335",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MUAFİYET VE İNTİBAK YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/163154",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ BİLİMSEL ARAŞTIRMA VE AR-GE PROJELERİ KOORDİNASYON KURULU UYGULAMA USUL VE ESASLARI HAKKINDA YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/146992",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ BİTİRME PROJELERİ YARIŞMASI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/187250",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ HİBE AR-GE TEST TAŞITLARININ KULLANIMINA İLİŞKİN ESAS VE USULLER HAKKINDA YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/147007",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ ÖĞRENCİLERİ İÇİN ONLİNE İŞ SAĞLIĞI EĞİTİM VE SINAV UYGULAMASINA İLİŞKİN ESAS VE USULLER HAKKINDA YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/149118",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ UYGULAMALI MÜHENDİSLİK DENEYİMİ EĞİTİMİ (UMDE) YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/157794",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ ZORUNLU STAJ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/163153",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ NOT DURUM BELGESİ (TRANSKRİPT) YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/193628",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRENCİ ARGE UYUM YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/157792",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRENCİ KONSEYİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/64446",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRENCİ SENATOSU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/150688",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRENCİ VE PERSONEL GEZİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/191643",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRETİM GELİŞTİRME DEKANLIĞI TEŞKİLAT, GÖREV VE ÇALIŞMA USULLERİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203212",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRETİM ÜYELERİNİN BİREYSEL EĞİTİM BAŞARILARININ ÖDÜLLENDİRİLME YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/73978",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖĞRETİM ÜYELİĞİNE YÜKSELTİLME VE ATANMA ÖLÇÜTLERİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/200018",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖLÇME VE DEĞERLENDİRME YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/188072",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖN LİSANS VE LİSANS DÜZEYİNDEKİ PROGRAMLAR ARASINDA ÇİFT ANADAL (ÇAP) VE LİSANS DÜZEYİNDE YANDAL PROGRAMI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/73977",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖN MALİ KONTROL İŞLEMLERİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/207351",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖZEL ÖĞRENCİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/159851",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ PEDAGOJİK FORMASYON EĞİTİMİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/69583",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ REHBERLİK VE PSİKOLOJİK DANIŞMANLIK BİRİMİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/137839",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ REKTÖRLÜĞÜ PERSONEL SERVİS HİZMETLERİNİN YÜRÜTÜLMESİNE DAİR YÖNERGE 18.03.2021-578-02",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/174361",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ BİLİMSEL ARAŞTIRMALARI ETİK KURULU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203073",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ EBELİK BÖLÜMÜ YAZ STAJ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/144137",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ EBELİK VE HEMŞİRELİK BÖLÜMÜ TELAFİ UYGULAMALARI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/172827",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ HEMŞİRELİK BÖLÜMÜ AKADEMİK DANIŞMANLIK VE KARİYER DANIŞMALIĞI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/199450",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ HEMŞİRELİK BÖLÜMÜ YAZ STAJI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/207697",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ HEMŞİRELİK/EBELİK BÖLÜMÜ 8. YARIYIL STAJ İNTÖRN YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/75218",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ İŞLETMEDE MESLEKİ EĞİTİM DERSİ UYGULAMA YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/182879",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK BİLİMLERİ FAKÜLTESİ KURUL VE KOMİSYONLARIN KURULUŞ VE ÇALIŞMA ESASLARI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/198483",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK HİZMETLERİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ EK ÖDEME YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/184074",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK KÜLTÜR VE SPOR DAİRE BAŞKANLIĞI İKTİSADİ İŞLETMESİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/151182",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK YÜKSEKOKULU HEMŞİRELİK- EBELİK BÖLÜMÜ 8. YARIYIL UYGULAMA (İNTÖRNLÜK) YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/64507",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM MİMARLIK FAKÜLTESİ GÖRSEL İLETİŞİM TASARIMI BÖLÜMÜ BİTİRME PROJESİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/209104",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ BÖLÜM STAJ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/106395",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ GÖRSEL İLETİŞİM TASARIMI BÖLÜMÜ STAJ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/209098",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ MİMARLIK BÖLÜMÜ MİMARİ TASARIM DERSLERİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/183578",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ ZORUNLU STAJ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/170515",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT, TASARIM VE MİMARLIK FAKÜLTESİ ÖZEL YETENEK SINAVI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/105354",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SEÇMELİ DERSLER YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/170516",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SEKTÖR DERSLERİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/150683",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SERBEST DOLAŞIM (FREE MOVER) YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/137997",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SIFIR ATIK YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/183549",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SINAV YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/163155",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SİYASAL BİLGİLER FAKÜLTESİ ÇALIŞMA EKONOMİSİ VE ENDÜSTRİ İLİŞKİLERİ BÖLÜMÜ MESLEKİ UYGULAMA YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/200164",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SİYASAL BİLGİLER FAKÜLTESİ İSLAM İKTİSADI VE FİNANS BÖLÜMÜ MESLEKİ UYGULAMA YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203074",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SOSYAL TRASKRİPT YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/147114",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SPOR, KÜLTÜR VE SANAT BİRLİĞİ BİRİM YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/95291",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SUCUL OMURGALI CANLI DENEYLERİ YEREL ETİK KURUL YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203188",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SÜREKLİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ TARAFINDAN DÜZENLENECEK YABANCI DİL KURSLARININ TANINMASI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/147491",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TEKNOLOJİ VE İNOVASYON YARIŞMALARI KOORDİNATÖRLÜĞÜ (TEKNOVA) YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/200384",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ İNTÖRNLÜK DÖNEMİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/64497",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ MEZUNİYET ÖNCESİ EĞİTİM - ÖĞRETİM VE SINAV YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/151461",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ MEZUNİYET SONRASI EĞİTİMİ KOMİSYONU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/160036",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TIP FAKÜLTESİ TIP EĞİTİMİ KURUL VE KOMİSYONLARI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/168714",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TİCARİ REKLAM, İLAN, AFİŞ, STANT VE TANITIM ARAÇLARI UYGULAMA YÖNERGESİ 06.03.2017",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/103978",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TOPLUMSAL KATKI VE SÜRDÜRÜLEBİLİRLİK KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/200123",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TURİZM FAKÜLTESİ STAJ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/128871",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TÜRK DİLİ ÖĞRETİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ EĞİTİM-ÖĞRETİM VE SINAV YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/156144",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TÜRK DİLİ ÖĞRETİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ İŞ VE GÖREV TANIMI, ÜCRETLENDİRME VE EK ÖDEMELERE İLİŞKİN YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/74730",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ULUSLARARASI EŞ DİPLOMALI DOKTORA EĞİTİM VE ÖĞRETİM YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/209004",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ULUSLARARASI ÖĞRENCİ SINAVI (SAKARYA YÖS) SINAV YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/159150",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ UZAKTAN EĞİTİM ARAŞTIRMA VE UYGULAMA MERKEZİ MÜDÜRLÜĞÜ İŞ VE GÖREV TANIMI, ÜCRETLENDİRME VE EK ÖDEMELERE İLİŞKİN YÖNERGE",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/149327",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİL HAZIRLIK SINIFLARI EĞİTİM-ÖĞRETİM SINAV YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/155759",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİLDE YÜRÜTÜLEN PROGRAMLARIN UYGULAMA YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/193629",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİLLER YÜKSEKOKULU İNGİLİZCE HAZIRLIK PROGRAMI EĞİTİM-ÖĞRETİM VE SINAV YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203217",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI UYRUKLU ÖĞRETİM ELEMANI İSTİHDAM VE DEĞERLENDİRME KOORDİNATÖRLÜĞÜ İLE ULUSLARARASI DANIŞMA KURULU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/207352",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YANGIN ÖNLEME VE SÖNDÜRME YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/82356",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YATAY GEÇİŞ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/159466",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YAYIN YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/64448",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YAYINLARI VE SAKARYA ÜNİVERSİTESİ KÜLTÜR YAYINLARI YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/180069",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YAZ ÖĞRETİMİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/157423",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YEMEK BURSU YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/163331",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YERLEŞKELERİ MOTORLU TAŞIT TRAFİĞİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/193545",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YETKİ DEVRİ VE İMZA YETKİLERİ YÖNERGESİ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/62119",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Yönerge",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YURT DIŞINA LİSANSÜSTÜ ÖĞRENİM AMACIYLA GÖNDERİLECEK ÖĞRENCİLERİ SEÇME VE YERLEŞTİRME BURS PROGRAMI KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/179505",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "İlke Kararı",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SÜREKLİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ İŞ TANIMI, ÜCRETLENDİRME VE KATKI PAYLARINA -EK ÖDEMELERE- İLİŞKİN İLKELER",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/74732",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "İlke Kararı",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÜRETKEN YAPAY ZEKA KULLANIM İLKELERİ REHBERİ",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/207704",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Uygulama / Program Esasları",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ DİŞ HEKİMLİĞİ FAKÜLTESİ İSTİSNAİ HİZMET UYGULAMA ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/207480",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Uygulama / Program Esasları",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ ARAPÇA HAZIRLIK SINIFI KUR SİSTEMİ UYGULAMA ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/155969",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Uygulama / Program Esasları",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANS PEDAGOJİK FORMASYON EĞİTİMİNE İLİŞKİN UYGULAMA ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/203367",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Uygulama / Program Esasları",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ DANIŞMA KURULU UYGULAMA ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/103977",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Uygulama / Program Esasları",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖN LİSANS VE LİSANS EĞİTİM ÖĞRETİM VE SINAV YÖNETMELİĞİ UYGULAMA ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/68082",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Uygulama / Program Esasları",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ÖN LİSANS VE LİSANS PROGRAMLARI BÜTÜNLEME SINAVI UYGULAMA ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/199469",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Uygulama / Program Esasları",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİLLER YÜKSEKOKULU ÜNİVERSİTE İSTEĞE BAĞLI İNGİLİZCE DERSLERİ EĞİTİM-ÖĞRETİM VE UYGULAMA ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/198617",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    },
+    {
+      "kategori": "Uygulama / Program Esasları",
+      "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YÜZ YÜZE EĞİTİMİN UZAKTAN EĞİTİM İLE DESTEKLENMESİ UYGULAMA ESASLARI",
+      "tarih": "01/01/0001",
+      "resmi_link": "https://kms.kaysis.gov.tr/Home/Goster/160104",
+      "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
+      "son_degisim_tarihi": "-",
+      "son_degisim_yontemi": "Bulunamadı"
+    }
+  ]
+}
