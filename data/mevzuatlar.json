@@ -1,9 +1,9 @@
 {
   "kaynak_url": "https://detsis.gov.tr/birim/35955870/35955870/2026-05-20",
-  "son_kontrol_tarihi": "2026-10-29T09:56:29",
-  "son_basarili_veri_kontrolu": "2026-10-29T09:56:29",
-  "son_otomatik_deneme": "2026-10-29T09:56:29",
-  "son_otomatik_guncelleme": "2026-10-29T09:56:29",
+  "son_kontrol_tarihi": "2026-10-29T15:56:30",
+  "son_basarili_veri_kontrolu": "2026-10-29T15:56:30",
+  "son_otomatik_deneme": "2026-10-29T15:56:30",
+  "son_otomatik_guncelleme": "2026-10-29T15:56:30",
   "guncelleme_durumu": "checked",
   "guncelleme_mesaji": "DETSİS başarıyla kontrol edildi, değişiklik yok.",
   "toplam": 243,
@@ -24,12 +24,6 @@
     "pdf_indirilemeyen": 0,
     "hata_sayisi": 243,
     "hatalar": [
-      {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ KÜTÜPHANE YÖNERGESİ",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/180744",
-        "hata": "Resmi sayfa okunamadı",
-        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
-      },
       {
         "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANSÜSTÜ PROGRAM AÇMA/KAPATMA, MÜFREDAT OLUŞTURMA VE GÜNCELLEME YÖNERGESİ",
         "url": "https://kms.kaysis.gov.tr/Home/Goster/202854",
@@ -289,6 +283,12 @@
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ERASMUS+ KA 131 & KA171 PROGRAMI YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/159389",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
         "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SAĞLIK HİZMETLERİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ EK ÖDEME YÖNERGESİ",
         "url": "https://kms.kaysis.gov.tr/Home/Goster/184074",
         "hata": "Resmi sayfa okunamadı",
@@ -307,26 +307,26 @@
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM MİMARLIK FAKÜLTESİ GÖRSEL İLETİŞİM TASARIMI BÖLÜMÜ BİTİRME PROJESİ YÖNERGESİ",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/209104",
-        "hata": "Resmi sayfa okunamadı",
-        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
-      },
-      {
         "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ BÖLÜM STAJ YÖNERGESİ",
         "url": "https://kms.kaysis.gov.tr/Home/Goster/106395",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ GÖRSEL İLETİŞİM TASARIMI BÖLÜMÜ STAJ YÖNERGESİ",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/209098",
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM MİMARLIK FAKÜLTESİ GÖRSEL İLETİŞİM TASARIMI BÖLÜMÜ BİTİRME PROJESİ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/209104",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
         "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ MİMARLIK BÖLÜMÜ MİMARİ TASARIM DERSLERİ YÖNERGESİ",
         "url": "https://kms.kaysis.gov.tr/Home/Goster/183578",
+        "hata": "Resmi sayfa okunamadı",
+        "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+      },
+      {
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SANAT TASARIM VE MİMARLIK FAKÜLTESİ GÖRSEL İLETİŞİM TASARIMI BÖLÜMÜ STAJ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/209098",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
@@ -463,14 +463,14 @@
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TÜRK DİLİ ÖĞRETİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ İŞ VE GÖREV TANIMI, ÜCRETLENDİRME VE EK ÖDEMELERE İLİŞKİN YÖNERGE",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/74730",
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ULUSLARARASI EŞ DİPLOMALI DOKTORA EĞİTİM VE ÖĞRETİM YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/209004",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ ULUSLARARASI EŞ DİPLOMALI DOKTORA EĞİTİM VE ÖĞRETİM YÖNERGESİ",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/209004",
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ TÜRK DİLİ ÖĞRETİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ İŞ VE GÖREV TANIMI, ÜCRETLENDİRME VE EK ÖDEMELERE İLİŞKİN YÖNERGE",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/74730",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
@@ -499,14 +499,14 @@
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİLLER YÜKSEKOKULU İNGİLİZCE HAZIRLIK PROGRAMI EĞİTİM-ÖĞRETİM VE SINAV YÖNERGESİ",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/203217",
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI UYRUKLU ÖĞRETİM ELEMANI İSTİHDAM VE DEĞERLENDİRME KOORDİNATÖRLÜĞÜ İLE ULUSLARARASI DANIŞMA KURULU YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/207352",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI UYRUKLU ÖĞRETİM ELEMANI İSTİHDAM VE DEĞERLENDİRME KOORDİNATÖRLÜĞÜ İLE ULUSLARARASI DANIŞMA KURULU YÖNERGESİ",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/207352",
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YABANCI DİLLER YÜKSEKOKULU İNGİLİZCE HAZIRLIK PROGRAMI EĞİTİM-ÖĞRETİM VE SINAV YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203217",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
@@ -559,14 +559,14 @@
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SÜREKLİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ İŞ TANIMI, ÜCRETLENDİRME VE KATKI PAYLARINA -EK ÖDEMELERE- İLİŞKİN İLKELER",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/74732",
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YURT DIŞINA LİSANSÜSTÜ ÖĞRENİM AMACIYLA GÖNDERİLECEK ÖĞRENCİLERİ SEÇME VE YERLEŞTİRME BURS PROGRAMI KOORDİNATÖRLÜĞÜ YÖNERGESİ",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/179505",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ YURT DIŞINA LİSANSÜSTÜ ÖĞRENİM AMACIYLA GÖNDERİLECEK ÖĞRENCİLERİ SEÇME VE YERLEŞTİRME BURS PROGRAMI KOORDİNATÖRLÜĞÜ YÖNERGESİ",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/179505",
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ SÜREKLİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ İŞ TANIMI, ÜCRETLENDİRME VE KATKI PAYLARINA -EK ÖDEMELERE- İLİŞKİN İLKELER",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/74732",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
@@ -583,14 +583,14 @@
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ ARAPÇA HAZIRLIK SINIFI KUR SİSTEMİ UYGULAMA ESASLARI",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/155969",
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANS PEDAGOJİK FORMASYON EĞİTİMİNE İLİŞKİN UYGULAMA ESASLARI",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/203367",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
       {
-        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ LİSANS PEDAGOJİK FORMASYON EĞİTİMİNE İLİŞKİN UYGULAMA ESASLARI",
-        "url": "https://kms.kaysis.gov.tr/Home/Goster/203367",
+        "mevzuat_adı": "SAKARYA ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ ARAPÇA HAZIRLIK SINIFI KUR SİSTEMİ UYGULAMA ESASLARI",
+        "url": "https://kms.kaysis.gov.tr/Home/Goster/155969",
         "hata": "Resmi sayfa okunamadı",
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       },
@@ -625,7 +625,7 @@
         "detay": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
       }
     ],
-    "olusturma_tarihi": "2026-10-29T09:56:29",
+    "olusturma_tarihi": "2026-10-29T15:56:30",
     "yontemler": {
       "HTML": "DETSİS resmi kayıt sayfasındaki son güncelleme, revizyon veya değişiklik tarihi alanı",
       "PDF": "Resmi kayıt sayfasından bulunan PDF içinde değişiklik tarihi ifadeleri",
