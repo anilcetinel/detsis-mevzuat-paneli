@@ -37,10 +37,11 @@ CHANGE_REPORT_PATH = LOG_DIR / "son_degisim_raporu.json"
 USER_AGENT = "Mozilla/5.0 (compatible; DETSIS-Mevzuat-Paneli/1.0)"
 LOG_LOCK = threading.Lock()
 CHANGE_DATE_ERRORS: list[dict[str, str]] = []
-PAGE_GOTO_TIMEOUT_MS = 120_000
-NETWORK_IDLE_TIMEOUT_MS = 45_000
-SCRAPE_MAX_ATTEMPTS = 4
-SCRAPE_RETRY_DELAY_SECONDS = 20
+PAGE_GOTO_TIMEOUT_MS = int(os.environ.get("DETSIS_PAGE_TIMEOUT_MS", "120000"))
+NETWORK_IDLE_TIMEOUT_MS = int(os.environ.get("DETSIS_NETWORK_IDLE_TIMEOUT_MS", "45000"))
+SCRAPE_MAX_ATTEMPTS = int(os.environ.get("DETSIS_MAX_ATTEMPTS", "4"))
+SCRAPE_RETRY_DELAY_SECONDS = int(os.environ.get("DETSIS_RETRY_DELAY_SECONDS", "20"))
+API_TIMEOUT_SECONDS = int(os.environ.get("DETSIS_API_TIMEOUT_SECONDS", "45"))
 
 
 @dataclass(frozen=True)
@@ -617,7 +618,7 @@ async def scrape() -> list[Regulation]:
 
 def scrape_from_api() -> list[Regulation]:
     log(f"DETSİS mevzuat API okunuyor: {MEVZUAT_API_URL}")
-    payload = fetch_json(MEVZUAT_API_URL)
+    payload = fetch_json(MEVZUAT_API_URL, timeout=API_TIMEOUT_SECONDS)
     items = payload.get("data")
     if not isinstance(items, list):
         raise RuntimeError("DETSİS mevzuat API beklenen listeyi döndürmedi.")
@@ -841,6 +842,12 @@ async def main() -> None:
                     raise RuntimeError(f"Canlı DETSİS kontrolü başarısız: {scrape_exc}") from scrape_exc
                 log("UYARI: Canlı scrape başarısız oldu ancak mevcut JSON/CSV geçerli. Public veri dosyası son başarılı kontrol halinde korunacak.")
                 log(f"Korunan kayıt sayısı: {len(previous_records)}")
+                if os.environ.get("GITHUB_ACTIONS") == "true":
+                    print("::warning::Canlı DETSİS kaynağına erişilemedi. Veri güncellenmedi; mevcut kayıtlar korundu.", flush=True)
+                    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+                    if summary_path:
+                        with open(summary_path, "a", encoding="utf-8") as summary:
+                            summary.write(f"Canlı DETSİS kaynağına erişilemedi. **Veri güncellenmedi.** Mevcut {len(previous_records)} kayıt korundu.\n")
                 return
             raise
         validate(records, previous_records)
