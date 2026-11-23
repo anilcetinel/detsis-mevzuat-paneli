@@ -25,7 +25,8 @@ concurrency:
 
 jobs:
   scrape:
-    runs-on: ubuntu-latest
+    # Playwright 1.52 supports Ubuntu 24.04; ubuntu-latest can move to newer releases.
+    runs-on: ubuntu-24.04
     timeout-minutes: 35
     steps:
       - name: Depoyu al
